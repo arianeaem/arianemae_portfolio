@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>./index.html</loc>
-  <url>
-    <loc>/</loc>
-  </url>
+    <loc>https://arianemae.me/</loc>
   </url>
   <url>
-    <loc>/project/makeup-by-jane/</loc>
+    <loc>https://arianemae.me/project/tony-shamas/</loc>
+  </url>
+  <url>
+    <loc>https://arianemae.me/project/makeup-by-jane/</loc>
   </url>
 </urlset>
