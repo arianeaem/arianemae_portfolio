@@ -19,12 +19,28 @@
   <meta property="og:image" id="og-image" content="">
   </head>
   <body>
+    <script>
+      // If a legacy query param is present, redirect to the pretty URL to keep links clean.
+      (function(){
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const id = params.get('id');
+          if (id) {
+            const pretty = '/project/' + encodeURIComponent(id) + '/';
+            // Use replace so browser history doesn't keep the messy URL
+            if (window.location.pathname + window.location.search !== pretty) {
+              window.location.replace(pretty);
+            }
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
     <header>
       <h1 id="ariane-logo">Ariane Mae</h1>
       <nav>
         <ul>
           <li><a class="header-back" href="#" onclick="history.back(); return false;">Back</a></li>
-          <li><a class="primary-button" href="index.html" aria-label="Home">Home</a></li>
+          <li><a class="primary-button" href="/" aria-label="Home">Home</a></li>
         </ul>
       </nav>
     </header>

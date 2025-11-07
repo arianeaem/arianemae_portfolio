@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>./index.html</loc>
+  <url>
+    <loc>/</loc>
+  </url>
   </url>
   <url>
-    <loc>./project.html?id=tony-shamas</loc>
-  </url>
-  <url>
-    <loc>./project.html?id=makeup-by-jane</loc>
+    <loc>/project/makeup-by-jane/</loc>
   </url>
 </urlset>
