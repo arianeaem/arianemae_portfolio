@@ -164,11 +164,11 @@ header nav ul li {
   top: 2px;
 }
 
-.primary-button {
-    background-color: #dc325f;
+  .primary-button {
+    background-color: #b22246; /* darker accent for better contrast */
     color: white;
     padding: 8px 16px;
-}
+  }
 
 .header-back:hover {
   font-family: "Pinyon Script", cursive;
@@ -438,7 +438,7 @@ img {
   text-transform: uppercase;
   display: block; /* keep on its own line below business category */
   transform-origin: center;
-  color: #dc325f; /* project category uses the requested accent color */
+  color: #b22246; /* project category uses a darker accessible accent color */
   /* use Aktiv Grotesk for the project category (UI/small label) */
   font-family: 'Aktiv Grotesk', sans-serif !important;
   letter-spacing: -0.020em;
@@ -500,8 +500,8 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.next-project:hover .next-project-text {
-  color: #dc325f; /* change to requested color on hover */
+  .next-project:hover .next-project-text {
+  color: #b22246; /* change to darker accessible color on hover */
 }
 
 .project-hero img {
@@ -556,7 +556,7 @@ section > form {
 }
 
 section > form p a {
-  color: var(--dc-accent, #dc325f);
+  color: var(--dc-accent, #b22246);
   text-decoration: none;
   font-weight: var(--fw-medium);
 }
@@ -603,7 +603,7 @@ section > form button[type="submit"] {
   padding: 12px 18px;
   font-size: 1rem;
   border: 0;
-  background: var(--primary-btn-bg, #dc325f);
+  background: var(--primary-btn-bg, #b22246);
   color: #fff;
   cursor: pointer;
   text-transform: none;
