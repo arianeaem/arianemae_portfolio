@@ -64,6 +64,9 @@
   /* line-heights: displays use 1 (tight), paragraphs use 1.5 */
   --lh-display: 1;
   --lh-paragraph: 1.5;
+  /* Branding colors */
+  --brand-accent: #b22246;
+  --brand-focus: rgba(178,34,70,0.9);
 }
 
 @font-face {
@@ -119,7 +122,7 @@ html {
   position: absolute;
   left: -999px;
   top: -999px;
-  background: #000;
+  background: #202020;
   color: #fff;
   padding: 8px 12px;
   z-index: 9999;
@@ -131,20 +134,21 @@ html {
   border-radius: 6px;
 }
 
-/* Focus indicators for keyboard users */
-a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px solid #ffd54f; /* visible, high-contrast focus ring */
+/* Focus indicators for keyboard users — use brand color and prefer :focus-visible */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--brand-focus, #b22246);
   outline-offset: 2px;
 }
 
-/* Make primary interactions more visible when focused */
-.primary-button:focus {
+/* Make primary interactions more visible when focused by keyboard */
+.primary-button:focus-visible {
+  outline: none;
   box-shadow: 0 0 0 4px rgba(178,34,70,0.14);
 }
 
 /* Ensure project card links show focus for keyboard nav */
-.project-card a:focus {
-  outline: 3px solid #b22246;
+.project-card a:focus-visible {
+  outline: 3px solid var(--brand-accent, #b22246);
   outline-offset: 4px;
 }
 
