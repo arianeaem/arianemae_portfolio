@@ -402,6 +402,19 @@ small, .caption {
   overflow: hidden; /* keep title inside image bounds */
 }
 
+/* Gradient overlay on project thumbnails: dark at bottom (50%) to transparent at top */
+.project-card a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0) 60%);
+  z-index: 1; /* sit above the image but below the title */
+}
+
 .project-card .thumb {
   display: block;
   width: 100%;
@@ -410,8 +423,6 @@ small, .caption {
 
 .project-card h3 {
   position: absolute;
-  left: 12px;
-  right: 12px;
   bottom: 12px;
   margin: 0;
   padding: 8px 10px;
@@ -425,6 +436,7 @@ small, .caption {
   display: inline-block;
   transform-origin: center;
   transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  z-index: 2; /* keep title above the gradient overlay */
 }
 
 img {
