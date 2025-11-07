@@ -4,9 +4,25 @@ function getQueryParam(name) {
   return params.get(name);
 }
 
+// Try to extract a project id from a pretty path like /project/makeup-by-jane or /project/makeup-by-jane/
+function getIdFromPath() {
+  try {
+    const parts = window.location.pathname.split('/').filter(Boolean);
+    // look for 'project' segment followed by slug
+    const idx = parts.indexOf('project');
+    if (idx !== -1 && parts.length > idx + 1) return parts[idx + 1];
+    // fallback: if the path itself looks like a slug (one segment)
+    if (parts.length === 1) return parts[0];
+  } catch (e) {
+    return null;
+  }
+  return null;
+}
+
 // Populate project page when present
 function populateProjectFromId() {
-  const id = getQueryParam('id');
+  let id = getQueryParam('id');
+  if (!id) id = getIdFromPath();
   if (!id) return;
   const data = window.PROJECTS && window.PROJECTS[id];
   // If no such project, show a simple message
@@ -82,9 +98,8 @@ function updateMetaForProject(data) {
   // canonical: set/update if present
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) {
-    const url = new URL(window.location.href);
-    url.search = '?id=' + encodeURIComponent(data.id || url.searchParams.get('id'));
-    canonical.href = url.toString();
+    // prefer the current pretty URL (if present) — use window.location.href so canonical matches the visible URL
+    canonical.href = window.location.href;
   }
 
 }
