@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+/* Load Cormorant Garamond (italics + 500 weight) per user request */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
+
+/* Design tokens: typography and spacing (8pt grid, perfect fourth scale based on 16px) */
+:root {
+  /* base */
+  --base-font-size: 16px;
+  --grid-unit: 8px; /* 8-point grid */
+
+  /* font families */
+  /* use Libre Caslon Text as the primary type per user request (removed Inter) */
+  --font-family-sans: 'Libre Caslon Text', serif;
+  --font-family-serif: 'Libre Caslon Text', serif;
+  --font-family-display: 'Libre Caslon Text', serif;
+  /* slim transform values for a visually condensed/slim look */
+  /* tuned slimming: slightly less aggressive so text reads better */
+  --display-slim-scale-x: 0.82;
+  --display-slim-scale-y: 1.04;
+
+  /* type scale (values from your spec) */
+  --display-xl-1-size: 77.75px;
+  --display-xl-2-size: 67.34px;
+  --display-large-size: 58.33px;
+  --display-medium-size: 50.52px;
+  --h1-size: 43.75px;
+  --h2-size: 37.9px;
+  --h3-size: 32.82px;
+  --h4-size: 28.43px;
+  --h5-size: 24.62px;
+  --h6-size: 21.33px;
+  --body-xl-size: 18.47px;
+  --body-size: 16px;
+  --body-sm-size: 13.86px;
+  --caption-lg-size: 12px;
+  --caption-size: 10.4px;
+  --caption-sm-size: 9px;
+  --overline-size: 7.8px;
+
+  /* weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi: 600;
+  --fw-bold: 700;
+  --fw-heavy: 800;
+
+  /* letter-spacing tokens (em) - display use negative, body normal, cta larger */
+  /* tightened letter-spacing for a condensed, tight look */
+  --ls-display-xl-1: -0.040em;
+  --ls-display-xl-2: -0.040em;
+  --ls-display-large: -0.035em;
+  --ls-display-medium: -0.030em;
+  --ls-h1: -0.030em;
+  --ls-h2: -0.025em;
+  --ls-h3: -0.020em;
+  --ls-h4: -0.018em;
+  --ls-h5: -0.016em;
+  --ls-h6: -0.014em;
+  --ls-body: 0em;
+  --ls-caption: 0em;
+  --ls-cta: 0.02em;
+
+  /* line-heights: displays use 1 (tight), paragraphs use 1.5 */
+  --lh-display: 1;
+  --lh-paragraph: 1.5;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+    src: url('./fonts/aktiv-grotesk/AktivGrotesk_Trial_Rg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./fonts/aktiv-grotesk/AktivGrotesk_Trial_Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./fonts/aktiv-grotesk/AktivGrotesk_Trial_SBd.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./fonts/aktiv-grotesk/AktivGrotesk_Trial_Bd.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('./fonts/aktiv-grotesk/AktivGrotesk_Trial_Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Libre Caslon Condensed font-face removed in favor of Cormorant Garamond per user request */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+
+html {
+  background-color: #fcfcfc;
+  color: #202020;
+  /* use the requested Libre Caslon Text across the site */
+  font-family: var(--font-family-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--base-font-size);
+  line-height: var(--lh-paragraph);
+}
+
+body { margin: 0; padding: 0; }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 10.25);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: auto;
+}
+
+#ariane-logo {
+    font-family: "Pinyon Script", cursive;
+    font-size: 32px;
+    line-height: 1;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}   
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.header-back, .primary-button {
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 600; /* regular */
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  color: #202020;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.header-back {
+  position: relative;
+  top: 2px;
+}
+
+.primary-button {
+    background-color: #dc325f;
+    color: white;
+    padding: 8px 16px;
+}
+
+.header-back:hover {
+  font-family: "Pinyon Script", cursive;
+  text-transform: capitalize;
+  font-size: 20px;
+  position: relative;
+  top: 3px; /* adjust this value until it looks centered */
+}
+
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h1);
+}
+
+h2 {
+  font-family: var(--font-family-sans);
+  font-size: var(--h2-size);
+  font-weight: var(--fw-semi);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h2);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--fw-semi);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h3);
+}
+
+h4 {
+  font-size: var(--h4-size);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h4);
+}
+
+h5 {
+  font-size: var(--h5-size);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h5);
+}
+
+h6 {
+  font-size: var(--h6-size);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h6);
+}
+
+p, .project-meta p, .about-links a {
+  font-size: var(--body-size);
+  line-height: var(--lh-paragraph);
+  letter-spacing: var(--ls-body);
+}
+
+small, .caption {
+  font-size: var(--caption-size);
+}
+
+/* Display utility classes */
+.display-xl-1 { font-family: var(--font-family-display); font-size: var(--display-xl-1-size); font-weight: var(--fw-regular); line-height: var(--lh-display); letter-spacing: var(--ls-display-xl-1); display: inline-block; transform-origin: center; transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y)); }
+.display-xl-2 { font-family: var(--font-family-display); font-size: var(--display-xl-2-size); font-weight: var(--fw-regular); line-height: var(--lh-display); letter-spacing: var(--ls-display-xl-2); display: inline-block; transform-origin: center; transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y)); }
+.display-large { font-family: var(--font-family-display); font-size: var(--display-large-size); font-weight: var(--fw-regular); line-height: var(--lh-display); letter-spacing: var(--ls-display-large); display: inline-block; transform-origin: center; transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y)); }
+.display-medium { font-family: var(--font-family-display); font-size: var(--display-medium-size); font-weight: var(--fw-regular); line-height: var(--lh-display); letter-spacing: var(--ls-display-medium); display: inline-block; transform-origin: center; transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y)); }
+
+#about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  gap: 64px;
+  padding: 0 60px;
+  text-align: center;
+  margin: 0 82px;
+}
+#about-me .text-content {
+  flex: 0 0 40%;
+  max-width: 500px;
+}
+
+#about-me img {
+  flex: 0 0 40%;
+  max-width: 400px;
+  object-fit: cover;
+}
+
+
+#about-me h2 {
+  display: flex;
+  flex-direction: column;
+  /* visual/layout only; typography handled by the element's class */
+  line-height: var(--lh-display);
+}
+
+#about-me .highlight-text .line {
+    display: block;
+}
+
+#about-me .highlight-text .line-1 { text-align: left; }
+#about-me .highlight-text .line-2 { text-align: right; }
+#about-me .highlight-text .line-3 { text-align: center; font-style: italic;}
+
+#about-me .sub-line {
+  display: block;
+  /* use Aktiv Grotesk for the small uppercase sub-line */
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  font-size: var(--h4-size);
+  margin-top: calc(var(--grid-unit) / 1.5);
+}
+
+.about-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: transparent;
+  text-decoration: none;
+  transition: transform .12s, background .12s;
+}
+
+/* image icons */
+.about-links .icon {
+  width: 18px;
+  height: auto;
+  display: block;
+}
+
+/* slightly larger Dribbble for visual balance */
+.about-links .icon-dribbble { width: 30px; }
+
+/* Projects section: keep top spacing but remove bottom margin so footer sits directly after
+   the section. This prevents an extra gap between the projects area and the footer. */
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 40px 60px;
+  margin: 64px 0 0; /* removed bottom margin */
+  text-align: left;          /* left align text */
+  box-sizing: border-box;
+  background-color: #761f3c;
+}
+
+#projects > h2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  font-family: var(--font-family-display);
+  color: #fcfcfc;
+  margin-bottom: calc(var(--grid-unit) * 2);
+  font-weight: var(--fw-regular);
+  line-height: 1.05;
+  text-align: center;
+  font-size: var(--display-xl-2-size);
+  display: inline-block;
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+}
+
+.projects-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 28px;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.project-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card a {
+  position: relative;
+  display: block;
+  overflow: hidden; /* keep title inside image bounds */
+}
+
+.project-card .thumb {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  padding: 8px 10px;
+  color: #fff;
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  font-size: 37.9px;
+  line-height: 1.1;
+  border-radius: 6px;
+  letter-spacing: -1px;
+  display: inline-block;
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+}
+
+img {
+  max-width: 100%; /* or any desired max width, e.g., 300px */
+  height: auto; /* maintains aspect ratio */
+}
+
+/* Project detail page adjustments */
+#project-detail {
+  max-width: 900px;
+  margin: 48px auto 0; /* remove bottom margin so footer is adjacent */
+  padding: 0 24px;
+  text-align: center; /* center the business name, categories and description */
+}
+
+/* Project business name: use condensed display, slightly smaller than business category, tight letter-spacing */
+#proj-business-name, .project-business-name {
+  margin: 8px 0 6px;
+  font-size: 28px; /* business name slightly smaller */
+  font-weight: var(--fw-medium);
+  font-family: var(--font-family-display);
+  letter-spacing: -0.020em;
+  font-style: italic;
+  display: block; /* keep each heading on its own line */
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+}
+
+.proj-business-category {
+  font-size: 40px !important; /* bigger than business name */
+  font-weight: var(--fw-semi);
+  margin: 10px 0 6px;
+  font-family: var(--font-family-display);
+  letter-spacing: -0.025em;
+  display: block; /* ensure it sits on its own line */
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  text-align: center;
+}
+
+.proj-project-category {
+  font-size: 18.47px !important; /* slightly bigger than business name, smaller than business category */
+  font-weight: var(--fw-medium);
+  margin: 6px 0 18px;
+  text-transform: uppercase;
+  display: block; /* keep on its own line below business category */
+  transform-origin: center;
+  color: #dc325f; /* project category uses the requested accent color */
+  /* use Aktiv Grotesk for the project category (UI/small label) */
+  font-family: 'Aktiv Grotesk', sans-serif !important;
+  letter-spacing: -0.020em;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  text-align: center;
+}
+
+.project-meta {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Next project teaser (large centered condensed text with hover image preview) */
+#next-project-wrap {
+  text-align: center;
+  margin: 80px 0 80px;
+}
+.next-project {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 60; /* keep text above the preview image */
+}
+.next-project-text {
+  font-family: var(--font-family-display);
+  font-size: 89.76px; /* as requested */
+  letter-spacing: -2px;
+  display: inline-block;
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  color: #202020;
+  position: relative;
+  z-index: 70; /* ensure text sits above the preview */
+}
+.next-project-label {
+  display: block;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #202020;
+  margin-bottom: 6px;
+}
+.next-project-preview {
+  position: fixed; /* so it can follow the cursor */
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.96);
+  max-width: 180px; /* slightly smaller preview */
+  width: 24vw;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20; /* behind the next-project text */
+}
+.next-project:hover .next-project-preview {
+  opacity: 1; /* fallback if JS isn't available */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.next-project:hover .next-project-text {
+  color: #dc325f; /* change to requested color on hover */
+}
+
+.project-hero img {
+  display: block;
+  margin: 28px auto 0; /* push image to bottom visually with spacing above */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Project gallery thumbnails */
+.proj-gallery {
+  display: flex;
+  flex-direction: column; /* stack images vertically */
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 0 12px;
+}
+.proj-gallery img {
+  width: 100%;
+  max-width: 900px; /* limit gallery images to 900px as requested */
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  border: 0;
+}
+
+/* (font-style for project business name now set in the main rule above) */
+
+/* Apply vertical flip to description as requested */
+#proj-description {
+  display: block;
+  transform-origin: center;
+  margin-top: 12px;
+}
+
+/* Use Cormorant Garamond 500 for descriptive paragraphs */
+#proj-description,
+.project-meta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18.47px;
+  font-weight: 500;
+}
+
+/* Contact form styles (improve layout, spacing and accessibility) */
+section > form {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 20px;
+  background: #fff;
+}
+
+section > form p a {
+  color: var(--dc-accent, #dc325f);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+}
+
+section > form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+section > form label {
+  display: block;
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+section > form input[type="text"],
+section > form input[type="email"],
+section > form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  font-family: var(--font-family-sans);
+}
+
+section > form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+section > form input:focus,
+section > form textarea:focus {
+  border-color: rgba(220,50,95,0.9);
+}
+
+section > form button[type="submit"] {
+  margin-top: 6px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 0;
+  background: var(--primary-btn-bg, #dc325f);
+  color: #fff;
+  cursor: pointer;
+  text-transform: none;
+  /* make the CTA slim, italic and not bold as requested */
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  font-family: var(--font-family-display);
+  /* apply the visual slim transform used for display text */
+  transform-origin: center;
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  letter-spacing: -0.012em;
+}
+
+section > form button[type="submit"]:hover {
+  filter: brightness(.96);
+}
+
+/* Small screens: keep spacing comfortable */
+@media (max-width: 640px) {
+  section > form { margin: 24px 12px; padding: 16px; }
+}
+
+/* Utility: screen reader only text */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/* Off-canvas contact panel (slides in from the right) */
+#contact {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(420px, 92vw);
+  transform: translateX(110%);
+  transition: transform .34s cubic-bezier(.2,.9,.2,1);
+  z-index: 120;
+  background: transparent; /* form element inside provides the card look */
+}
+
+#contact.open {
+  transform: translateX(0);
+}
+
+#contact form {
+  height: 100%;
+  overflow: auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(32,32,32,0.06);
+}
+
+#contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16,16,16,0.46);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .24s ease;
+  z-index: 110;
+}
+
+#contact.open + #contact-overlay,
+#contact.open ~ #contact-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+/* When the panel is open, prevent background scroll */
+body.contact-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  #contact { width: 100vw; }
+  #contact form { padding: 20px; }
+}
+
+/* Responsive breakpoints: adjust layout and type for tablet and phone widths */
+@media (max-width: 1024px) {
+  /* tablet / small laptop: reduce projects columns and tighten spacing */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #about-me { gap: 40px; padding: 0 36px; margin: 0 48px; }
+
+  /* scale down large display headings a bit */
+  .display-xl-2, #projects > h2 { font-size: calc(var(--display-xl-2-size) * 0.82); }
+  .next-project-text { font-size: calc(89.76px * 0.7); }
+}
+
+@media (max-width: 768px) {
+  /* tablet / large phone: single column for about-me, projects grid to 2->1 at narrower widths */
+  #about-me { flex-direction: column; padding: 0 18px; margin: 0 24px; }
+  #about-me img, #about-me .text-content { flex: none; max-width: 100%; }
+
+  .projects-grid { grid-template-columns: 1fr; max-width: 720px; padding: 0 12px; }
+
+  /* reduce hero/display sizes so they fit smaller viewports */
+  .display-xl-2, #projects > h2 { font-size: calc(var(--display-xl-2-size) * 0.62); }
+  .display-large { font-size: calc(var(--display-large-size) * 0.72); }
+  .next-project-text { font-size: calc(89.76px * 0.48); }
+
+  header { margin: 18px 18px; }
+  header nav ul { gap: 10px; }
+}
+
+@media (max-width: 320px) {
+  /* smallest phones: compact spacing and font-size tweaks */
+  html { font-size: 14px; }
+  header { margin: 12px 12px; }
+  #about-me { gap: 16px; padding: 0 10px; margin: 0 8px; }
+  .next-project-text { font-size: 28px; }
+  .project-card h3 { font-size: 1.05rem; left: 8px; right: 8px; bottom: 8px; padding: 6px 8px; }
+}
+
+/* Footer styling */
+footer {
+  padding: calc(var(--grid-unit) * 2) 0;
+  text-align: center;
+  color: #fcfcfc;
+  font-size: 0.9375rem; /* 15px */
+  background-color: #761f3c;
+}
+
+footer p { margin: 0; font-size: var(--body-size); font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+
+@media (max-width: 768px) {
+  footer { padding: calc(var(--grid-unit) * 1.5) 0; font-size: 0.875rem; }
+}

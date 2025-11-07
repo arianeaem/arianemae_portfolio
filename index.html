@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the portfolio of Ariane Mae as a web designer where she shows her works that she have done.">
+    <!-- Performance: preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="./index.html">
+    <!-- Structured data: Person/creative professional -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ariane Mae",
+      "jobTitle": "Web Designer",
+      "url": "./index.html"
+    }
+    </script>
+    <title>Ariane Mae | Web Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional Bootstrap link (later) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+    <h1 id="ariane-logo">Ariane Mae</h1>
+      <nav>
+        <ul>
+          <li><a class="header-back" href="#" onclick="history.back(); return false;">Back</a></li>
+          <li><a class="primary-button" href="#">Get in touch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Me Section -->
+      <section id="about-me">
+        <div class="text-content">
+          <h2 class="display-xl-2">
+            <span class="highlight-text">
+              <span class="line line-1">I design</span>
+              <span class="line line-2">websites for</span>
+              <span class="line line-3">women-owned brands</span>
+            </span>
+            <span class="sub-line">ready to show up as the brand they dream of becoming.</span>
+          </h2>
+          <div class="about-links">
+            <a class="link-resume" href="resume.pdf" aria-label="Resume" target="_blank" rel="noopener">
+              <img src="images/document.svg" alt="" class="icon icon-document">
+            </a>
+            <a class="link-social" href="https://www.linkedin.com/in/arianemaegusto/" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <img src="images/linkedin.svg" alt="" class="icon icon-linkedin">
+            </a>
+            <a class="link-dribbble" href="https://dribbble.com/arianemae" aria-label="Dribbble" target="_blank" rel="noopener">
+              <img src="images/dribbble.svg" alt="" class="icon icon-dribbble">
+            </a>
+          </div>
+        </div>
+        
+        <img src="images/image-ari.webp" alt="Ariane Mae portrait">
+      </section>
+
+
+      <!-- Projects Section -->
+    <section id="projects">
+        <h2>In Bloom: My Works</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-project-id="tony-shamas">
+            <a href="project.html?id=tony-shamas">
+              <img class="thumb" loading="lazy" width="400" height="300" src="images/tony-shamas.jpg" alt="Tony Shamas project">
+              <h3>Tony Shamas</h3>
+            </a>
+          </article>
+          <article class="project-card" data-project-id="makeup-by-jane">
+            <a href="project.html?id=makeup-by-jane">
+              <img class="thumb" loading="lazy" width="400" height="300" src="images/makeup-by-jane.png" alt="Makeup by Jane project">
+              <h3>Makeup by Jane</h3>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section id="contact">
+      <form action="contact.php" method="post" aria-labelledby="contact-heading">
+        <!-- email removed per user request -->
+
+        <fieldset>
+          <legend id="contact-heading" class="sr-only">Contact Ariane</legend>
+          <button type="button" class="contact-close" aria-label="Close contact form">×</button>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="full-name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="user_email" placeholder="you@example.com" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject (optional)">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="user_message" placeholder="Tell me about your project" required></textarea>
+
+          <button type="submit" class="primary-button">Send a message</button>
+        </fieldset>
+      </form>
+    </section>
+    <div id="contact-overlay" aria-hidden="true"></div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>© 2025 Ariane Mae</p>
+    </footer>
+    <script src="contact.js" defer></script>
+    <script src="projects-data.js" defer></script>
+    <script src="project-scripts.js" defer></script>
+  </body>
+</html>

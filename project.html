@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project — details</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Performance: preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="canonical" href="./project.html">
+  <!-- Meta placeholders populated by JS for SEO on project pages -->
+  <meta name="description" id="meta-description" content="Project details by Ariane Mae">
+  <meta property="og:title" id="og-title" content="Project — Ariane Mae">
+  <meta property="og:description" id="og-description" content="Project details by Ariane Mae">
+  <meta property="og:image" id="og-image" content="">
+  </head>
+  <body>
+    <header>
+      <h1 id="ariane-logo">Ariane Mae</h1>
+      <nav>
+        <ul>
+          <li><a class="header-back" href="#" onclick="history.back(); return false;">Back</a></li>
+          <li><a class="primary-button" href="index.html" aria-label="Home">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="project-detail">
+        <!-- Business name placed near the top; header remains the site logo -->
+        <h2 id="proj-business-name" class="project-business-name"></h2>
+
+        <div class="project-meta">
+          <p id="proj-business-category" class="proj-business-category"></p>
+          <p id="proj-project-category" class="proj-project-category"></p>
+          <div id="proj-description"></div>
+        </div>
+
+        <div class="project-hero">
+          <img id="proj-image" src="" alt="Project image">
+        </div>
+        <!-- Gallery thumbnails (populated by JS when a project has multiple images) -->
+        <div id="proj-gallery" class="proj-gallery" aria-label="Project gallery"></div>
+      </section>
+      <!-- Next project teaser -->
+      <div id="next-project-wrap">
+        <div class="next-project" data-next-id="">
+          <div class="next-project-label">VIEW NEXT PROJECT</div>
+          <span class="next-project-text">Next Project</span>
+          <img class="next-project-preview" src="" alt="Next project preview">
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Ariane Mae</p>
+    </footer>
+
+    <script src="projects-data.js" defer></script>
+    <script src="project-scripts.js" defer></script>
+  </body>
+</html>
