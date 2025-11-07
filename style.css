@@ -123,7 +123,7 @@ html {
   left: -999px;
   top: -999px;
   background: #202020;
-  color: #fff;
+  color: #fcfcfc;
   padding: 8px 12px;
   z-index: 9999;
   text-decoration: none;
@@ -204,7 +204,7 @@ header nav ul li {
 
   .primary-button {
     background-color: #b22246; /* darker accent for better contrast */
-    color: white;
+    color: #fcfcfc;
     padding: 8px 16px;
   }
 
@@ -386,12 +386,28 @@ small, .caption {
 
 .projects-grid {
   width: 100%;
-  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 28px;
   align-items: start;
   box-sizing: border-box;
+}
+
+/* Upcoming projects message styling */
+.projects-upcoming {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 18px;
+  text-align: center;
+}
+.projects-upcoming-text {
+  font-family: var(--font-family-display);
+  font-size: var(--display-xl-2-size);
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  letter-spacing: var(--ls-display-xl-2);
+  line-height: var(--lh-display);
+  color: #fcfcfc;
+  margin: 0;
 }
 
 .project-card {
@@ -430,7 +446,7 @@ small, .caption {
   bottom: 12px;
   margin: 0;
   padding: 8px 10px;
-  color: #fff;
+  color: #fcfcfc;
   font-family: var(--font-family-display);
   font-weight: 400;
   font-size: 37.9px;
@@ -443,6 +459,10 @@ small, .caption {
   z-index: 2; /* keep title above the gradient overlay */
 }
 
+.projects-upcoming {
+  font-family: var(--font-family-display);
+  color: #fcfcfc;
+}
 img {
   max-width: 100%; /* or any desired max width, e.g., 300px */
   height: auto; /* maintains aspect ratio */
@@ -654,7 +674,7 @@ section > form button[type="submit"] {
   font-size: 1rem;
   border: 0;
   background: var(--primary-btn-bg, #b22246);
-  color: #fff;
+  color: #fcfcfc;
   cursor: pointer;
   text-transform: none;
   /* make the CTA slim, italic and not bold as requested */
@@ -762,6 +782,20 @@ body.contact-open {
   /* scale down large display headings a bit */
   .display-xl-2, #projects > h2 { font-size: calc(var(--display-xl-2-size) * 0.82); }
   .next-project-text { font-size: calc(89.76px * 0.7); }
+  
+  /* Responsive: upcoming projects message on tablet */
+  .projects-upcoming {
+    max-width: 720px; /* keep it narrower on tablet */
+    padding: 0 12px; /* give some horizontal breathing room */
+    margin-top: 16px;
+  }
+  .projects-upcoming-text {
+    font-size: calc(var(--display-xl-2-size) * 0.82);
+    line-height: 1.02;
+    white-space: normal; /* allow wrapping */
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 
 @media (max-width: 768px) {
@@ -778,6 +812,20 @@ body.contact-open {
 
   header { margin: 18px 18px; }
   header nav ul { gap: 10px; }
+  
+  /* Responsive: upcoming projects message on phones/tablets */
+  .projects-upcoming {
+    max-width: 680px;
+    padding: 0 14px;
+    margin-top: 12px;
+  }
+  .projects-upcoming-text {
+    font-size: calc(var(--display-xl-2-size) * 0.62);
+    line-height: 1.02;
+    white-space: normal;
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 
 @media (max-width: 320px) {
@@ -787,6 +835,19 @@ body.contact-open {
   #about-me { gap: 16px; padding: 0 10px; margin: 0 8px; }
   .next-project-text { font-size: 28px; }
   .project-card h3 { font-size: 1.05rem; left: 8px; right: 8px; bottom: 8px; padding: 6px 8px; }
+  
+  /* Smallest phones: keep upcoming message readable without overflow */
+  .projects-upcoming {
+    padding: 0 8px;
+    margin-top: 10px;
+  }
+  .projects-upcoming-text {
+    font-size: 28px;
+    line-height: 1.02;
+    white-space: normal;
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 
 /* Footer styling */

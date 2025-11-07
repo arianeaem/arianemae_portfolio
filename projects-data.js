@@ -20,7 +20,7 @@ window.PROJECTS = {
   },
   "makeup-by-jane": {
     "businessName": "Makeup by Jane",
-    "businessCategory": "Makeup",
+    "businessCategory": "Beauty and Makeup",
     "projectCategory": "Branding & Web Design",
     "description": "Makeup by Jane is an award-winning Melbourne bridal makeup artist known for her calm presence and timeless artistry. I redesigned her website to better reflect her premium reputation, highlight her portfolio, and create a seamless experience that turns visitors into bridal enquiries.",
   "image": "/images/makeup-by-jane.png",

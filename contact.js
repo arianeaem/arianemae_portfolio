@@ -83,7 +83,7 @@
       wrap.innerHTML = '<p style="margin:0 0 12px">It looks like your device may not have a mail app configured. You can copy the address below and paste it into your email app:</p>' +
   '<div style="display:flex;gap:8px;align-items:center"><input id="mailto-fallback-input" value="'+
   email+'" style="flex:1;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px" readonly>' +
-  '<button id="mailto-copy" style="padding:8px 10px;border-radius:6px;background:#b22246;color:#fff;border:0;cursor:pointer">Copy</button></div>' +
+  '<button id="mailto-copy" style="padding:8px 10px;border-radius:6px;background:#b22246;color:#fcfcfc;border:0;cursor:pointer">Copy</button></div>' +
         '<div style="text-align:right;margin-top:10px"><button id="mailto-close" style="background:transparent;border:0;color:#333;cursor:pointer">Close</button></div>';
 
       document.body.appendChild(wrap);
