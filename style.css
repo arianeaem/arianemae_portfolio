@@ -114,6 +114,40 @@ html {
   line-height: var(--lh-paragraph);
 }
 
+/* Skip link styles: visible on focus */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  border-radius: 6px;
+}
+
+/* Focus indicators for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid #ffd54f; /* visible, high-contrast focus ring */
+  outline-offset: 2px;
+}
+
+/* Make primary interactions more visible when focused */
+.primary-button:focus {
+  box-shadow: 0 0 0 4px rgba(178,34,70,0.14);
+}
+
+/* Ensure project card links show focus for keyboard nav */
+.project-card a:focus {
+  outline: 3px solid #b22246;
+  outline-offset: 4px;
+}
+
 body { margin: 0; padding: 0; }
 
 /* Header */

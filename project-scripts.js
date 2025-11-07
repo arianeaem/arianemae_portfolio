@@ -58,6 +58,8 @@ function populateProjectFromId() {
       imgEl.src = data.image || '';
       imgEl.alt = (data.businessName ? data.businessName + ' project image' : 'Project image');
     }
+      // set a default intrinsic size for the hero image to reduce layout shift
+      try { imgEl.setAttribute('width', '900'); imgEl.setAttribute('height', '675'); } catch(e){}
   }
   if (businessCatEl) businessCatEl.textContent = data.businessCategory || '';
   if (projectCatEl) projectCatEl.textContent = data.projectCategory || '';
@@ -122,6 +124,9 @@ function renderProjectGallery(data) {
     gi.alt = (data.businessName ? data.businessName + ' image ' + (idx + 1) : 'Project image');
     gi.src = item['1x'] || item['2x'] || data.image || '';
     gi.srcset = [(item['1x'] ? item['1x'] + ' 1x' : null), (item['2x'] ? item['2x'] + ' 2x' : null)].filter(Boolean).join(', ');
+    // provide intrinsic dimensions (4:3 ratio) to reduce layout shift
+    gi.setAttribute('width', '900');
+    gi.setAttribute('height', '675');
     galleryWrap.appendChild(gi);
   });
 }
@@ -152,6 +157,12 @@ function populateIndexCards() {
         img.alt = project.businessName || '';
       }
     }
+
+      // Ensure thumbnails have explicit intrinsic size to avoid layout shift
+      if (img) {
+        if (!img.hasAttribute('width')) img.setAttribute('width', '400');
+        if (!img.hasAttribute('height')) img.setAttribute('height', '300');
+      }
 
   // ensure card link points to the pretty project page (/project/<slug>/)
   const a = card.querySelector('a');
@@ -202,12 +213,23 @@ function populateNextProject() {
       imgEl.src = nextData.image || '';
       imgEl.alt = (nextData.businessName ? nextData.businessName + ' preview' : 'Next project preview');
     }
+    // set intrinsic size to avoid layout shifts
+    try { imgEl.setAttribute('width', '240'); imgEl.setAttribute('height', '180'); } catch(e){}
   }
 
   // navigate when clicking the teaser
   wrap.addEventListener('click', function(){
     const targetId = wrap.dataset.nextId;
     if (targetId) window.location.href = `/project/${encodeURIComponent(targetId)}/`;
+  });
+
+  // allow keyboard activation (Enter / Space)
+  wrap.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const targetId = wrap.dataset.nextId;
+      if (targetId) window.location.href = `/project/${encodeURIComponent(targetId)}/`;
+    }
   });
 
   // make the preview follow the mouse while hovered

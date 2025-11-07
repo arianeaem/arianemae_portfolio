@@ -11,6 +11,7 @@
     <link rel="icon" href="/images/ariane-mae-icon.svg" type="image/svg+xml">
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
       <h1 id="ariane-logo">Ariane Mae</h1>
       <nav>
@@ -21,7 +22,7 @@
       </nav>
     </header>
 
-    <main>
+  <main id="main-content" tabindex="-1">
       <section id="project-detail">
         <h2 id="proj-business-name" class="project-business-name"></h2>
         <div class="project-meta">
@@ -35,7 +36,7 @@
         <div id="proj-gallery" class="proj-gallery" aria-label="Project gallery"></div>
       </section>
       <div id="next-project-wrap">
-        <div class="next-project" data-next-id="">
+  <div class="next-project" data-next-id="" tabindex="0" role="link" aria-label="View next project">
           <div class="next-project-label">VIEW NEXT PROJECT</div>
           <span class="next-project-text">Next Project</span>
           <img class="next-project-preview" src="" alt="Next project preview">

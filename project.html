@@ -19,6 +19,8 @@
   <meta property="og:image" id="og-image" content="">
   </head>
   <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <script>
       // If a legacy query param is present, redirect to the pretty URL to keep links clean.
       (function(){
@@ -45,7 +47,7 @@
       </nav>
     </header>
 
-    <main>
+  <main id="main-content" tabindex="-1">
       <section id="project-detail">
         <!-- Business name placed near the top; header remains the site logo -->
         <h2 id="proj-business-name" class="project-business-name"></h2>
@@ -64,7 +66,7 @@
       </section>
       <!-- Next project teaser -->
       <div id="next-project-wrap">
-        <div class="next-project" data-next-id="">
+  <div class="next-project" data-next-id="" tabindex="0" role="link" aria-label="View next project">
           <div class="next-project-label">VIEW NEXT PROJECT</div>
           <span class="next-project-text">Next Project</span>
           <img class="next-project-preview" src="" alt="Next project preview">

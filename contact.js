@@ -6,11 +6,14 @@
   var overlay = document.getElementById('contact-overlay');
   var closeBtn = document.querySelector('.contact-close');
   if (!openBtn || !contact || !overlay) return;
+  // indicate the opener controls a dialog
+  try { openBtn.setAttribute('aria-haspopup','dialog'); openBtn.setAttribute('aria-expanded','false'); } catch(e){}
 
   function openContact(){
     contact.classList.add('open');
     document.body.classList.add('contact-open');
     overlay.setAttribute('aria-hidden','false');
+    try { openBtn.setAttribute('aria-expanded','true'); } catch(e){}
     // move focus into the form
     var firstInput = contact.querySelector('input, textarea, button');
     if (firstInput) firstInput.focus();
@@ -19,6 +22,7 @@
     contact.classList.remove('open');
     document.body.classList.remove('contact-open');
     overlay.setAttribute('aria-hidden','true');
+    try { openBtn.setAttribute('aria-expanded','false'); } catch(e){}
     // return focus to the opener
     openBtn.focus();
   }
@@ -33,8 +37,24 @@
   if (closeBtn) closeBtn.addEventListener('click', function(){ closeContact(); });
 
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && contact.classList.contains('open')) {
-      closeContact();
+    if (contact.classList.contains('open')) {
+      // Trap focus inside the contact panel when open
+      if (e.key === 'Tab') {
+        var focusable = contact.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        focusable = Array.prototype.slice.call(focusable).filter(function(el){ return el.offsetParent !== null; });
+        if (focusable.length === 0) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      }
+      if (e.key === 'Escape') {
+        closeContact();
+      }
+      return;
     }
   });
 
