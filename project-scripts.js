@@ -153,9 +153,9 @@ function populateIndexCards() {
       }
     }
 
-    // ensure card link points to the project page
-    const a = card.querySelector('a');
-    if (a) a.href = `project.html?id=${encodeURIComponent(id)}`;
+  // ensure card link points to the pretty project page (/project/<slug>/)
+  const a = card.querySelector('a');
+  if (a) a.href = `/project/${encodeURIComponent(id)}/`;
 
     // set title if present
     const h3 = card.querySelector('h3');
@@ -165,7 +165,9 @@ function populateIndexCards() {
 
 // Compute and populate a "next project" teaser
 function populateNextProject() {
-  const id = getQueryParam('id');
+  // determine current project id from query param or pretty path
+  let id = getQueryParam('id');
+  if (!id) id = getIdFromPath();
   if (!window.PROJECTS) return;
   const keys = Object.keys(window.PROJECTS);
   if (!keys.length) return;
@@ -205,7 +207,7 @@ function populateNextProject() {
   // navigate when clicking the teaser
   wrap.addEventListener('click', function(){
     const targetId = wrap.dataset.nextId;
-    if (targetId) window.location.href = 'project.html?id=' + encodeURIComponent(targetId);
+    if (targetId) window.location.href = `/project/${encodeURIComponent(targetId)}/`;
   });
 
   // make the preview follow the mouse while hovered
