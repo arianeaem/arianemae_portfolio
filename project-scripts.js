@@ -168,9 +168,9 @@ function populateIndexCards() {
   const a = card.querySelector('a');
   if (a) a.href = `/project/${encodeURIComponent(id)}/`;
 
-    // set title if present
-    const h3 = card.querySelector('h3');
-    if (h3) h3.textContent = project.businessName || h3.textContent;
+  // set title if present (prefer businessCategory, fall back to businessName)
+  const h3 = card.querySelector('h3');
+  if (h3) h3.textContent = project.businessCategory || project.businessName || h3.textContent;
   });
 }
 
