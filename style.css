@@ -203,7 +203,7 @@ header nav ul li {
 }
 
   .primary-button {
-    background-color: #b22246; /* darker accent for better contrast */
+    background-color: #e7456b; /* darker accent for better contrast */
     color: #fcfcfc;
     padding: 8px 16px;
   }
@@ -654,6 +654,7 @@ section > form textarea {
   padding: 10px 12px;
   font-size: 1rem;
   border: 1px solid #e6e6e6;
+  background-color: #ffd0e0;
   outline: none;
   font-family: var(--font-family-sans);
 }
@@ -727,7 +728,7 @@ section > form button[type="submit"]:hover {
   overflow: auto;
   padding: 28px;
   box-sizing: border-box;
-  background: #fff;
+  background: #fcfcfc;
   box-shadow: 0 6px 18px rgba(32,32,32,0.06);
 }
 

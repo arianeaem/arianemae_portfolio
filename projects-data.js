@@ -38,9 +38,9 @@ window.PROJECTS = {
     "businessName": "Marra Patel",
     "businessCategory": "Business Coaching / Consulting",
     "projectCategory": "Branding & Web Design",
-    "description": "A full website transformation for Marra McDonald, a mentor helping service-based founders move from hustle to sustainable growth. The goal was to create a digital home that reflects her grounded expertise and holistic SuccessFOR™ approach — clear pathways, elevated design, and messaging that communicates calm leadership and genuine transformation. ",
-  "image": "/images/marra-patel.png",
-  "thumb1x": "/images/marra-patel.png",
+    "description": "A full website transformation for Marra Patel, a mentor helping service-based founders move from hustle to sustainable growth. The goal was to create a digital home that reflects her grounded expertise and holistic SuccessFOR™ approach — clear pathways, elevated design, and messaging that communicates calm leadership and genuine transformation. ",
+  "image": "/images/marra-patel.jpg",
+  "thumb1x": "/images/marra-patel.jpg",
     // gallery: two project images, each with density-based 1x/2x files
     "gallery": [
   { "1x": "/images/marra-patel-1-1x.webp", "2x": "/images/marra-patel-1-2x.webp" },
