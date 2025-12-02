@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ariane Mae - Brand Strategy & Design</title>
+    <title>Inquire - Ariane Mae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 <nav class="navbar navbar-expand-lg bg-transparent" id="main-navbar" style="z-index: 1030;">
     <div class="container-md">
         <!-- Logo at the left -->
-        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="index.html">Ariane Mae</a>
+        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="/home/">Ariane Mae</a>
 
         <!-- Toggler at right when collapsed -->
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +42,10 @@
         <!-- Collapse menu and button -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-transform: uppercase;">
             <div class="navbar-nav ms-3">
-                <a class="nav-item nav-link" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="services.html">Services</a>
-                <a class="nav-item nav-link" href="../index.html">Portfolio</a>
-                <a class="nav-item nav-link" href="story.html">Story</a>
+                <a class="nav-item nav-link" href="/home/">Home</a>
+                <a class="nav-item nav-link" href="/services/">Services</a>
+                <a class="nav-item nav-link" href="/">Portfolio</a>
+                <a class="nav-item nav-link" href="/story/">Story</a>
             </div>
             <!-- Button: far right on desktop, inside menu on mobile -->
             <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
@@ -90,7 +90,7 @@
   display: inline-block;
 }
 </style>
-    <a href="./inquire.html" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
+    <a href="/inquire/" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
         Inquire
     </a>
             </div>
@@ -125,65 +125,153 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-    <main class="container" style="padding-top: 80px; background-color: #fcfcfc; min-height: 60vh;">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h1 class="mb-4" style="font-family: 'LibreCaslonCondensed', serif; font-size: 3.5rem; color: #202020;">Welcome to Ariane Mae</h1>
-                <p class="lead mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #202020;">Where brands come to life with intention, elegance, and unmistakable presence.</p>
-                
-                <div class="row mt-5">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100" style="border: none; background-color: transparent;">
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Services</h5>
-                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">Discover our comprehensive brand strategy and design offerings.</p>
-                                <a href="./services.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">Explore Services</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100" style="border: none; background-color: transparent;">
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Portfolio</h5>
-                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">See the transformative work we've done for our clients.</p>
-                                <a href="../index.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">View Portfolio</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100" style="border: none; background-color: transparent;">
-                            <div class="card-body text-center">
-                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Story</h5>
-                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">Learn about the vision and passion behind Ariane Mae.</p>
-                                <a href="./story.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">Read Story</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-5">
-                    <p class="mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: #202020;">Ready to transform your brand?</p>
-                    <a href="./inquire.html" class="btn btn-lg" style="background-color: #761f3c; color: #fcfcfc; border: none; padding: 16px 32px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif; font-weight: bold;">Start Your Journey</a>
-                </div>
-            </div>
+    <style>
+.form-control:invalid, .form-check-input:invalid {
+    border-color: #dc3545;
+}
+.form-control:invalid:focus, .form-check-input:invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+/* Input and textarea backgrounds: 30% opacity of #e7456b */
+.form-control,
+.form-select {
+  background-color: rgba(231, 69, 107, 0.3) !important;
+}
+
+/* Borders, radios, checkboxes: dark gray at 75% opacity */
+.form-control,
+.form-select,
+.form-floating>.form-control,
+.form-floating>.form-select,
+hr,
+.form-check-input {
+  border-color: rgba(32, 32, 32, 0.75) !important;
+}
+
+/* Divider lines */
+hr {
+  border-top: 1.5px solid rgba(32, 32, 32, 0.75) !important;
+    margin: 0 !important;
+}
+
+/* Radio and checkbox checked state: use #e7456b instead of gray */
+.form-check-input:checked {
+  background-color: #e7456b !important;
+  border-color: #e7456b !important;
+}
+
+/* Optional: focus ring for accessibility */
+.form-check-input:focus {
+  border-color: #e7456b !important;
+  box-shadow: 0 0 0 .25rem rgba(231, 69, 107, 0.25) !important;
+}
+</style>
+<main class="container" style="padding-top: 80px; background-color: #fcfcfc;">
+        
+    
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h1 style="font-family: 'LibreCaslonCondensed';">So… you're the one who's actually ready.</h1>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Ready to invest in your growth. Ready to move different. Ready to step into the version of your brand you keep talking about.</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">I only take on a limited number of clients at a time, so if you're serious about claiming your spot, this is your moment to move.</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Fill out the inquiry form. I'll review it and get back to you ASAP. Let's build something that feels unmistakably you.</p>
         </div>
-    </main>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <form action="https://formsubmit.co/hello@arianemae.me" method="POST" id="inquire-form" novalidate>
+                <!-- FormSubmit configuration fields -->
+                <input type="hidden" name="_subject" value="New Inquiry from Website">
+                <input type="hidden" name="_next" value="https://arianemae.me/inquire/?success=1">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_token" value="" autocomplete="off">
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" id="full_name" value="" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Email" id="email" value="" required aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll use this to send your confirmation and follow-up details.</div>
+                </div>
+                <div class="mb-4">
+                    <label for="location" class="form-label">Where are you based?</label>
+                    <input type="text" name="location" class="form-control" id="location" placeholder="City, Region or Country" value="">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="form-label">What's your current business situation?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="business_situation" id="startup_launch" value="startup_launch">
+                        <label class="form-check-label" for="startup_launch">I'm launching a new business</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="business_situation" id="rebrand_refresh" value="rebrand_refresh">
+                        <label class="form-check-label" for="rebrand_refresh">I need a rebrand/refresh</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="business_situation" id="established_growth" value="established_growth">
+                        <label class="form-check-label" for="established_growth">I'm established but ready to elevate</label>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="budget" class="form-label">What's your investment range?</label>
+                    <select class="form-select" name="budget" id="budget">
+                        <option value="">Select your range</option>
+                        <option value="under_5k">Under $5,000</option>
+                        <option value="5k_10k">$5,000 - $10,000</option>
+                        <option value="10k_20k">$10,000 - $20,000</option>
+                        <option value="20k_plus">$20,000+</option>
+                        <option value="lets_discuss">Let's discuss what's possible</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="timeline" class="form-label">When do you want to get started?</label>
+                    <select class="form-select" name="timeline" id="timeline">
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP - I'm ready now</option>
+                        <option value="1_2_months">1-2 months</option>
+                        <option value="3_6_months">3-6 months</option>
+                        <option value="planning">Just planning ahead</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="tell_me_more" class="form-label">Tell me about your vision</label>
+                    <textarea class="form-control" name="tell_me_more" id="tell_me_more" rows="4" placeholder="What does success look like for you? What's the dream you're building toward?"></textarea>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="biggest_challenge" class="form-label">What's your biggest challenge right now?</label>
+                    <textarea class="form-control" name="biggest_challenge" id="biggest_challenge" rows="3" placeholder="What's keeping you stuck or holding you back?"></textarea>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="found_me_how" class="form-label">How did you find me?</label>
+                    <input type="text" name="found_me_how" class="form-control" id="found_me_how" placeholder="Instagram, referral, Google, etc." value="">
+                </div>
+                
+                <button type="submit" class="inquire-btn w-lg-auto btn-primary-responsive">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
 
     <footer class="w-100 pb-4" style="background-color: #761f3c; padding-top: 80px; margin: 0;">
     <div class="container-fluid" style="padding-bottom: 40px; max-width: 500px;">
         <div class="row">
             <div class="col-md-12 pb-4 text-center">
                 <h1 style="font-family: 'LibreCaslonCondensed', serif; color: #fcfcfc; margin-bottom: 20px;">Get ready to show up like the brand you dream of</h1>
-                <a href="./inquire.html" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
+                <a href="/inquire/" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
             </div>
             <div class="col-md-12">
                 <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
-                    <a href="./" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
-                    <a href="./services.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
-                    <a href="../index.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
-                    <a href="./story.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
+                    <a href="/home/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
+                    <a href="/services/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
+                    <a href="/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
+                    <a href="/story/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
                 </nav>
             </div>
         </div>
@@ -192,4 +280,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer></body>
 
 </html>
-

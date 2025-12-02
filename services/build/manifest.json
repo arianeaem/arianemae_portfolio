@@ -1,0 +1,61 @@
+{
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Bold.ttf": {
+    "file": "assets/LibreCaslonCondensed-Bold-jhMrLsgN.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Bold.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-BoldItalic.ttf": {
+    "file": "assets/LibreCaslonCondensed-BoldItalic-DVobgFkQ.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-BoldItalic.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Italic.ttf": {
+    "file": "assets/LibreCaslonCondensed-Italic-KNDYdxFT.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Italic.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Medium.ttf": {
+    "file": "assets/LibreCaslonCondensed-Medium-BdThVpWO.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Medium.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-MediumItalic.ttf": {
+    "file": "assets/LibreCaslonCondensed-MediumItalic-CmNNHzEK.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-MediumItalic.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Regular.ttf": {
+    "file": "assets/LibreCaslonCondensed-Regular-D-cdHg-J.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-Regular.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-SemiBold.ttf": {
+    "file": "assets/LibreCaslonCondensed-SemiBold-dDAhTwa5.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-SemiBold.ttf"
+  },
+  "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-SemiBoldItalic.ttf": {
+    "file": "assets/LibreCaslonCondensed-SemiBoldItalic-LOn9UoAQ.ttf",
+    "src": "resources/fonts/LibreCaslonCondensed/LibreCaslonCondensed-SemiBoldItalic.ttf"
+  },
+  "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_Bd.ttf": {
+    "file": "assets/AktivGrotesk_Trial_Bd-Co13DPqR.ttf",
+    "src": "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_Bd.ttf"
+  },
+  "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_Rg.ttf": {
+    "file": "assets/AktivGrotesk_Trial_Rg-CwiTcUBl.ttf",
+    "src": "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_Rg.ttf"
+  },
+  "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_SBd.ttf": {
+    "file": "assets/AktivGrotesk_Trial_SBd-5yV-rjXc.ttf",
+    "src": "resources/fonts/aktiv-grotesk/AktivGrotesk_Trial_SBd.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DCu1qdz4.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-OxMeGc97.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  }
+}
