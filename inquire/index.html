@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inquire - Ariane Mae</title>
+    <link rel="icon" type="image/svg+xml" href="../images/ariane-mae-icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap"
@@ -179,6 +180,42 @@
             border-color: #e7456b !important;
             box-shadow: 0 0 0 .25rem rgba(231, 69, 107, 0.25) !important;
         }
+
+        /* Accessibility improvements */
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333333;
+            padding: 0;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /* Ensure sufficient contrast for form elements */
+        .form-text {
+            color: #333333 !important; /* Improved contrast */
+        }
+
+        .form-label {
+            color: #333333 !important; /* Ensure good contrast */
+        }
     </style>
     <main class="container" style="padding-top: 80px; background-color: #fcfcfc;">
 
@@ -215,11 +252,13 @@
                     <input type="hidden" name="_token" value="" autocomplete="off">
 
                     <div class="mb-3">
+                        <label for="full_name" class="form-label visually-hidden">Full Name</label>
                         <input type="text" name="name" class="form-control" placeholder="Full Name" id="full_name"
                             value="" required>
                     </div>
 
                     <div class="mb-3">
+                        <label for="email" class="form-label visually-hidden">Email Address</label>
                         <input type="email" name="email" class="form-control" placeholder="Email" id="email" value=""
                             required aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll use this to send your confirmation and follow-up
@@ -227,9 +266,9 @@
                     </div>
 
                     <div class="mb-4">
+                        <label for="location" class="form-label">Where are you based?</label>
                         <input type="text" name="location" class="form-control" id="location"
                             placeholder="City, Region or Country" value="">
-                        <div class="form-text">Where are you based?</div>
                     </div>
 
                     <div class="d-flex align-items-center my-3">
@@ -237,23 +276,26 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="business_name" class="form-label visually-hidden">Business Name</label>
                         <input type="text" name="business_name" class="form-control" placeholder="Business Name"
                             id="business_name" required>
                     </div>
 
                     <div class="mb-3">
+                        <label for="current_website" class="form-label visually-hidden">Current Website</label>
                         <input type="url" name="current_website" class="form-control" placeholder="Your Current Website"
                             id="current_website">
                     </div>
 
                     <div class="mb-4">
+                        <label for="social_url" class="form-label visually-hidden">Social Media URL</label>
                         <input type="url" name="social_url" class="form-control" placeholder="Paste any social URL"
-                            id="social_url" required>
-                        <div class="form-text">This helps us learn more about your visual style.</div>
+                            id="social_url" required aria-describedby="socialHelp">
+                        <div id="socialHelp" class="form-text">This helps us learn more about your visual style.</div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label">How long have you been in business?</label>
+                    <fieldset class="mb-4">
+                        <legend class="form-label">How long have you been in business?</legend>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="business_length" id="business_less_1"
                                 value="Less than 1 year">
@@ -274,14 +316,14 @@
                                 value="Over 5 years">
                             <label class="form-check-label" for="business_over_5">Over 5 years</label>
                         </div>
-                    </div>
+                    </fieldset>
 
                     <div class="d-flex align-items-center my-4">
                         <hr class="flex-grow-1">
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label">Which service(s) are you interested in?</label>
+                    <fieldset class="mb-4">
+                        <legend class="form-label">Which service(s) are you interested in?</legend>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="services[]" id="service_lumpsum"
                                 value="Uh oh, I'm falling in love - Lumpsum Web Design">
@@ -302,7 +344,7 @@
                         </div>
                         <div id="services-error" class="text-danger mt-2" style="display: none;">Please select at least
                             one service.</div>
-                    </div>
+                    </fieldset>
 
                     <div class="mb-4">
                         <textarea class="form-control" name="project_goals" id="project_goals" rows="4"
@@ -322,6 +364,7 @@
                     </div>
 
                     <div class="mb-4">
+                        <label for="mood_board" class="form-label visually-hidden">Link to Mood Board / Pinterest Board</label>
                         <input type="url" name="mood_board" class="form-control" id="mood_board"
                             placeholder="Link to Mood Board / Pinterest Board">
                     </div>
@@ -330,8 +373,8 @@
                         <hr class="flex-grow-1">
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label">Estimated Investment Range</label>
+                    <fieldset class="mb-4">
+                        <legend class="form-label">Estimated Investment Range</legend>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="investment_range" id="budget_1k_2k"
                                 value="$1,000 - $2,000" required>
@@ -352,10 +395,10 @@
                                 value="$5,000+">
                             <label class="form-check-label" for="budget_5k">$5,000+</label>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="mb-4">
-                        <label class="form-label">How ready are you to get started?</label>
+                    <fieldset class="mb-4">
+                        <legend class="form-label">How ready are you to get started?</legend>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="readiness" id="ready_lets_do"
                                 value="Let's do this">
@@ -372,18 +415,20 @@
                                 value="I'm exploring options">
                             <label class="form-check-label" for="ready_exploring">I'm exploring options</label>
                         </div>
-                    </div>
+                    </fieldset>
 
                     <div class="d-flex align-items-center my-4">
                         <hr class="flex-grow-1">
                     </div>
 
                     <div class="mb-4">
+                        <label for="how_heard" class="form-label visually-hidden">How did you hear about me?</label>
                         <input type="text" name="how_heard" class="form-control" id="how_heard"
                             placeholder="How did you hear about me?" required>
                     </div>
 
                     <div class="mb-4">
+                        <label for="extra_context" class="form-label visually-hidden">Any extra context you'd like to share</label>
                         <textarea class="form-control" name="extra_context" id="extra_context" rows="3"
                             placeholder="Any extra context you'd like to share"></textarea>
                     </div>
@@ -407,7 +452,7 @@
                             Started</a>
                     </div>
                     <div class="col-md-12">
-                        <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
+                        <nav style="margin-bottom: 12px; display: flex; justify-content: center; gap: 30px;">
                             <a href="/home/"
                                 style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
                             <a href="/services/"
