@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
+    <title>Ariane Mae - Brand Strategy & Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 <nav class="navbar navbar-expand-lg bg-transparent" id="main-navbar" style="z-index: 1030;">
     <div class="container-md">
         <!-- Logo at the left -->
-        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="/">Ariane Mae</a>
+        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="index.html">Ariane Mae</a>
 
         <!-- Toggler at right when collapsed -->
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +42,10 @@
         <!-- Collapse menu and button -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-transform: uppercase;">
             <div class="navbar-nav ms-3">
-                <a class="nav-item nav-link" href="/">Home</a>
-                <a class="nav-item nav-link" href="/">Services</a>
-                <a class="nav-item nav-link" href="/">Portfolio</a>
-                <a class="nav-item nav-link" href="/">Story</a>
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="services.html">Services</a>
+                <a class="nav-item nav-link" href="../index.html">Portfolio</a>
+                <a class="nav-item nav-link" href="story.html">Story</a>
             </div>
             <!-- Button: far right on desktop, inside menu on mobile -->
             <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
@@ -90,7 +90,7 @@
   display: inline-block;
 }
 </style>
-    <a href="/inquire/" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
+    <a href="./inquire.html" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
         Inquire
     </a>
             </div>
@@ -125,44 +125,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-        <div class="row">
-        <div class="col-md-8">
-            <h1 class="mb-3">Welcome</h1>
-            <p class="lead">This is the home page. Bootstrap is installed locally and bundled with Vite.</p>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Get started</h5>
-                    <p class="card-text">Visit the <a href="./services.html">Services</a> page to see offerings.</p>
+    <main class="container" style="padding-top: 80px; background-color: #fcfcfc; min-height: 60vh;">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="mb-4" style="font-family: 'LibreCaslonCondensed', serif; font-size: 3.5rem; color: #202020;">Welcome to Ariane Mae</h1>
+                <p class="lead mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #202020;">Where brands come to life with intention, elegance, and unmistakable presence.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="border: none; background-color: transparent;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Services</h5>
+                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">Discover our comprehensive brand strategy and design offerings.</p>
+                                <a href="./services.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">Explore Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="border: none; background-color: transparent;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Portfolio</h5>
+                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">See the transformative work we've done for our clients.</p>
+                                <a href="../index.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100" style="border: none; background-color: transparent;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="font-family: 'LibreCaslonCondensed', serif; color: #761f3c;">Story</h5>
+                                <p class="card-text" style="font-family: 'Cormorant Garamond', serif;">Learn about the vision and passion behind Ariane Mae.</p>
+                                <a href="./story.html" class="btn" style="background-color: #e7456b; color: #fcfcfc; border: none; padding: 12px 24px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif;">Read Story</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <p class="mb-4" style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: #202020;">Ready to transform your brand?</p>
+                    <a href="./inquire.html" class="btn btn-lg" style="background-color: #761f3c; color: #fcfcfc; border: none; padding: 16px 32px; text-transform: uppercase; font-family: 'AktivGrotesk', sans-serif; font-weight: bold;">Start Your Journey</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h6>Quick Links</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="./links.html">Links</a></li>
-                        <li><a href="./story.html">Our Story</a></li>
-                        <li><a href="/inquire/">Inquire</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer class="w-100 pb-4" style="background-color: #761f3c; padding-top: 80px; margin: 0;">
     <div class="container-fluid" style="padding-bottom: 40px; max-width: 500px;">
         <div class="row">
             <div class="col-md-12 pb-4 text-center">
                 <h1 style="font-family: 'LibreCaslonCondensed', serif; color: #fcfcfc; margin-bottom: 20px;">Get ready to show up like the brand you dream of</h1>
-                <a href="/inquire/" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
+                <a href="./inquire.html" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
             </div>
             <div class="col-md-12">
                 <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
                     <a href="./" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
                     <a href="./services.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
-                    <a href="/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
+                    <a href="../index.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
                     <a href="./story.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
                 </nav>
             </div>
