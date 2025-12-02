@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="./build/assets/app-OxMeGc97.css" /><link rel="modulepreload" as="script" href="./build/assets/app-DCu1qdz4.js" /><link rel="stylesheet" href="./build/assets/app-OxMeGc97.css" /><script type="module" src="./build/assets/app-DCu1qdz4.js"></script></head>
+
+<body style="background-color: #fcfcfc;">
+    <style>
+/* On small screens (when the toggler shows), give navbar a light background */
+@media (max-width: 991.98px) {
+  nav.navbar { background-color: #fcfcfc !important; }
+}
+
+/* Hide navbar on scroll down, show on scroll up */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+</style>
+<nav class="navbar navbar-expand-lg bg-transparent" id="main-navbar" style="z-index: 1030;">
+    <div class="container-md">
+        <!-- Logo at the left -->
+        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="/">Ariane Mae</a>
+
+        <!-- Toggler at right when collapsed -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse menu and button -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-transform: uppercase;">
+            <div class="navbar-nav ms-3">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link" href="/">Services</a>
+                <a class="nav-item nav-link" href="/">Portfolio</a>
+                <a class="nav-item nav-link" href="/">Story</a>
+            </div>
+            <!-- Button: far right on desktop, inside menu on mobile -->
+            <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
+                <style>
+.btn-primary-responsive {
+  display: inline-block;
+  background-color: #e7456b;
+  color: #fcfcfc;
+  padding: 12px 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.btn-primary-responsive:hover,
+.btn-primary-responsive:focus {
+  background-color: #d63e64;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 420px) {
+  .btn-primary-responsive {
+    /* keep padding consistent on very small screens */
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary-responsive.btn-block,
+  .btn-primary-responsive.full-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Utility class for full-width buttons when needed */
+.btn-block {
+  display: inline-block;
+}
+</style>
+    <a href="/inquire/" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
+        Inquire
+    </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('main-navbar');
+    const scrollThreshold = 100; // Start hiding after 100px scroll
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Only apply hide/show logic after scrolling past threshold
+        if (scrollTop > scrollThreshold) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down - hide navbar
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Scrolling up - show navbar
+                navbar.classList.remove('navbar-hidden');
+            }
+        } else {
+            // Always show navbar when near top
+            navbar.classList.remove('navbar-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+});
+</script>
+        <h1 class="mb-3">Our Story</h1>
+    <p>We build thoughtful digital experiences. Tell the user story here and explain your process.</p>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">How we work</h5>
+            <p class="card-text">Discovery → Design → Build → Measure. We collaborate with clients to deliver meaningful results.</p>
+        </div>
+    </div>
+
+    <footer class="w-100 pb-4" style="background-color: #761f3c; padding-top: 80px; margin: 0;">
+    <div class="container-fluid" style="padding-bottom: 40px; max-width: 500px;">
+        <div class="row">
+            <div class="col-md-12 pb-4 text-center">
+                <h1 style="font-family: 'LibreCaslonCondensed', serif; color: #fcfcfc; margin-bottom: 20px;">Get ready to show up like the brand you dream of</h1>
+                <a href="/inquire/" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
+            </div>
+            <div class="col-md-12">
+                <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
+                    <a href="./" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
+                    <a href="./services.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
+                    <a href="/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
+                    <a href="./story.html" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <p class="text-center m-0" style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #fcfcfc; margin-bottom: 20px;">&copy; 2025 Ariane Mae</p>
+</footer></body>
+
+</html>
+
