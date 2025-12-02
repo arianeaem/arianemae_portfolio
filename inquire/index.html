@@ -6,573 +6,644 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inquire - Ariane Mae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="./build/assets/app-OxMeGc97.css" /><link rel="modulepreload" as="script" href="./build/assets/app-DCu1qdz4.js" /><link rel="stylesheet" href="./build/assets/app-OxMeGc97.css" /><script type="module" src="./build/assets/app-DCu1qdz4.js"></script></head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="style" href="./build/assets/app-OxMeGc97.css" />
+    <link rel="modulepreload" as="script" href="./build/assets/app-DCu1qdz4.js" />
+    <link rel="stylesheet" href="./build/assets/app-OxMeGc97.css" />
+    <script type="module" src="./build/assets/app-DCu1qdz4.js"></script>
+</head>
 
 <body style="background-color: #fcfcfc;">
     <style>
-/* On small screens (when the toggler shows), give navbar a light background */
-@media (max-width: 991.98px) {
-  nav.navbar { background-color: #fcfcfc !important; }
-}
-
-/* Hide navbar on scroll down, show on scroll up */
-.navbar-hidden {
-  transform: translateY(-100%);
-}
-
-.navbar {
-  transition: transform 0.3s ease-in-out;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-</style>
-<nav class="navbar navbar-expand-lg bg-transparent" id="main-navbar" style="z-index: 1030;">
-    <div class="container-md">
-        <!-- Logo at the left -->
-        <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;" href="/home/">Ariane Mae</a>
-
-        <!-- Toggler at right when collapsed -->
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Collapse menu and button -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-transform: uppercase;">
-            <div class="navbar-nav ms-3">
-                <a class="nav-item nav-link" href="/home/">Home</a>
-                <a class="nav-item nav-link" href="/services/">Services</a>
-                <a class="nav-item nav-link" href="/">Portfolio</a>
-                <a class="nav-item nav-link" href="/story/">Story</a>
-            </div>
-            <!-- Button: far right on desktop, inside menu on mobile -->
-            <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
-                <style>
-.btn-primary-responsive {
-  display: inline-block;
-  background-color: #e7456b;
-  color: #fcfcfc;
-  padding: 12px 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 0;
-  text-decoration: none;
-  text-align: center;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.btn-primary-responsive:hover,
-.btn-primary-responsive:focus {
-  background-color: #d63e64;
-  color: #fff;
-  text-decoration: none;
-}
-
-@media (max-width: 420px) {
-  .btn-primary-responsive {
-    /* keep padding consistent on very small screens */
-    padding: 8px 16px;
-    font-size: 0.95rem;
-  }
-
-  .btn-primary-responsive.btn-block,
-  .btn-primary-responsive.full-mobile {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* Utility class for full-width buttons when needed */
-.btn-block {
-  display: inline-block;
-}
-</style>
-    <a href="/inquire/" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
-        Inquire
-    </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('main-navbar');
-    const scrollThreshold = 100; // Start hiding after 100px scroll
-
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Only apply hide/show logic after scrolling past threshold
-        if (scrollTop > scrollThreshold) {
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down - hide navbar
-                navbar.classList.add('navbar-hidden');
-            } else {
-                // Scrolling up - show navbar
-                navbar.classList.remove('navbar-hidden');
-            }
-        } else {
-            // Always show navbar when near top
-            navbar.classList.remove('navbar-hidden');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-});
-</script>
-    <style>
-.form-control:invalid, .form-check-input:invalid {
-    border-color: #dc3545;
-}
-.form-control:invalid:focus, .form-check-input:invalid:focus {
-    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
-}
-/* Input and textarea backgrounds: 30% opacity of #e7456b */
-.form-control,
-.form-select {
-  background-color: rgba(231, 69, 107, 0.3) !important;
-}
-
-/* Borders, radios, checkboxes: dark gray at 75% opacity */
-.form-control,
-.form-select,
-.form-floating>.form-control,
-.form-floating>.form-select,
-hr,
-.form-check-input {
-  border-color: rgba(32, 32, 32, 0.75) !important;
-}
-
-/* Divider lines */
-hr {
-  border-top: 1.5px solid rgba(32, 32, 32, 0.75) !important;
-    margin: 0 !important;
-}
-
-/* Radio and checkbox checked state: use #e7456b instead of gray */
-.form-check-input:checked {
-  background-color: #e7456b !important;
-  border-color: #e7456b !important;
-}
-
-/* Optional: focus ring for accessibility */
-.form-check-input:focus {
-  border-color: #e7456b !important;
-  box-shadow: 0 0 0 .25rem rgba(231, 69, 107, 0.25) !important;
-}
-</style>
-<main class="container" style="padding-top: 80px; background-color: #fcfcfc;">
-    
-    <!-- Success/Error Messages -->
-    <div id="success-message" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-        Your inquiry is in. I'm already excited to learn more about your vision. I'll review your details and get back to you as soon as possible with next steps.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    
-    <div id="error-message" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-        <span id="error-text"></span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <h1 style="font-family: 'LibreCaslonCondensed';">So… you're the one who's actually ready.</h1>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Ready to invest in your growth. Ready to move different. Ready to step into the version of your brand you keep talking about.</p>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">I only take on a limited number of clients at a time, so if you're serious about claiming your spot, this is your moment to move.</p>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Fill out the inquiry form. I'll review it and get back to you ASAP. Let's build something that feels unmistakably you.</p>
-        </div>
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-4">
-            <form action="https://formsubmit.co/hello@arianemae.me" method="POST" id="inquire-form" novalidate>
-                <!-- FormSubmit configuration fields -->
-                <input type="hidden" name="_subject" value="New Inquiry from Website">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_token" value="" autocomplete="off">
-                
-                <div class="mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" id="full_name" value="" required>
-                </div>
-                
-                <div class="mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Email" id="email" value="" required aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll use this to send your confirmation and follow-up details.</div>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="location" class="form-label">Where are you based?</label>
-                    <input type="text" name="location" class="form-control" id="location" placeholder="City, Region or Country" value="">
-                </div>
-                
-                <div class="mb-3">
-                    <input type="text" name="business_name" class="form-control" placeholder="Business Name" id="business_name" value="">
-                </div>
-                
-                <div class="mb-3">
-                    <input type="url" name="current_website" class="form-control" placeholder="Your Current Website" id="current_website" value="">
-                </div>
-                
-                <div class="mb-4">
-                    <input type="url" name="social_url" class="form-control" placeholder="Paste any social URL" id="social_url" value="">
-                    <div class="form-text">This helps us learn more about your visual style.</div>
-                </div>
-                
-                <div class="mb-4">
-                    <label class="form-label">How long have you been in business?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="business_length" id="business_less_1" value="Less than 1 year">
-                        <label class="form-check-label" for="business_less_1">Less than 1 year</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="business_length" id="business_1_3" value="1–3 years">
-                        <label class="form-check-label" for="business_1_3">1–3 years</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="business_length" id="business_3_5" value="3–5 years">
-                        <label class="form-check-label" for="business_3_5">3–5 years</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="business_length" id="business_over_5" value="Over 5 years">
-                        <label class="form-check-label" for="business_over_5">Over 5 years</label>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <label class="form-label">Which service(s) are you interested in?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="services[]" id="service_lumpsum" value="Uh oh, I'm falling in love - Lumpsum Web Design">
-                        <label class="form-check-label" for="service_lumpsum">Uh oh, I'm falling in love - Lumpsum Web Design</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="services[]" id="service_monthly" value="Oh no, I'm falling in love again - Monthly Web Design">
-                        <label class="form-check-label" for="service_monthly">Oh no, I'm falling in love again - Monthly Web Design</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="services[]" id="service_brand" value="Oh, I'm falling in love - Brand Identity">
-                        <label class="form-check-label" for="service_brand">Oh, I'm falling in love - Brand Identity</label>
-                    </div>
-                    <div id="services-error" class="text-danger mt-2" style="display: none;">Please select at least one service.</div>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="project_goals" class="form-label">What are you hoping to create? What challenges should this solve?</label>
-                    <textarea class="form-control" name="project_goals" id="project_goals" rows="4" placeholder=""></textarea>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="why_me" class="form-label">Why do you want to work with me specifically?</label>
-                    <textarea class="form-control" name="why_me" id="why_me" rows="3" placeholder=""></textarea>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="launch_date" class="form-label">Do you have a desired launch date?</label>
-                    <input type="date" name="launch_date" class="form-control" id="launch_date" value="">
-                    <div class="form-text">You can estimate if you're unsure.</div>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="mood_board" class="form-label">Link to Mood Board / Pinterest Board</label>
-                    <input type="url" name="mood_board" class="form-control" id="mood_board" value="">
-                </div>
-                
-                <div class="mb-4">
-                    <label for="investment_range" class="form-label">Estimated Investment Range</label>
-                    <select class="form-select" name="investment_range" id="investment_range">
-                        <option value="">Select your range</option>
-                        <option value="$1,000 - $2,000">$1,000 - $2,000</option>
-                        <option value="$2,000 – $3,000">$2,000 – $3,000</option>
-                        <option value="$3,000 – $4,000">$3,000 – $4,000</option>
-                        <option value="$5,000+">$5,000+</option>
-                    </select>
-                </div>
-                
-                <div class="mb-4">
-                    <label class="form-label">How ready are you to get started?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="readiness" id="ready_lets_do" value="Let's do this">
-                        <label class="form-check-label" for="ready_lets_do">Let's do this</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="readiness" id="ready_questions" value="I'm interested but have questions">
-                        <label class="form-check-label" for="ready_questions">I'm interested but have questions</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="readiness" id="ready_exploring" value="I'm exploring options">
-                        <label class="form-check-label" for="ready_exploring">I'm exploring options</label>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="how_heard" class="form-label">How did you hear about me?</label>
-                    <input type="text" name="how_heard" class="form-control" id="how_heard" placeholder="" value="">
-                </div>
-                
-                <div class="mb-4">
-                    <label for="extra_context" class="form-label">Any extra context you'd like to share</label>
-                    <textarea class="form-control" name="extra_context" id="extra_context" rows="3" placeholder=""></textarea>
-                </div>
-                
-                <button type="submit" class="inquire-btn w-lg-auto btn-primary-responsive">
-                    Secure My Quote
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <footer class="w-100 pb-4" style="background-color: #761f3c; padding-top: 80px; margin: 0;">
-    <div class="container-fluid" style="padding-bottom: 40px; max-width: 500px;">
-        <div class="row">
-            <div class="col-md-12 pb-4 text-center">
-                <h1 style="font-family: 'LibreCaslonCondensed', serif; color: #fcfcfc; margin-bottom: 20px;">Get ready to show up like the brand you dream of</h1>
-                <a href="/inquire/" style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get Started</a>
-            </div>
-            <div class="col-md-12">
-                <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
-                    <a href="/home/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
-                    <a href="/services/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
-                    <a href="/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
-                    <a href="/story/" style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <p class="text-center m-0" style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #fcfcfc; margin-bottom: 20px;">&copy; 2025 Ariane Mae</p>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('inquire-form');
-    const serviceLumpsum = document.getElementById('service_lumpsum');
-    const serviceMonthly = document.getElementById('service_monthly');
-    const servicesCheckboxes = document.querySelectorAll('input[name="services[]"]');
-    const servicesError = document.getElementById('services-error');
-    const FORM_DATA_KEY = 'inquire_form_data';
-
-    // Check for success parameter in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success')) {
-        document.getElementById('success-message').classList.remove('d-none');
-        // Remove the success parameter from URL without page reload
-        const newUrl = window.location.href.split('?')[0];
-        window.history.replaceState({}, document.title, newUrl);
-    }
-
-    // Function to save form data to localStorage
-    function saveFormData() {
-        const formData = new FormData(form);
-        const data = {};
-        
-        // Handle regular inputs
-        for (let [key, value] of formData.entries()) {
-            if (key === 'services[]') {
-                if (!data.services) data.services = [];
-                data.services.push(value);
-            } else {
-                data[key] = value;
+        /* On small screens (when the toggler shows), give navbar a light background */
+        @media (max-width: 991.98px) {
+            nav.navbar {
+                background-color: #fcfcfc !important;
             }
         }
-        
-        localStorage.setItem(FORM_DATA_KEY, JSON.stringify(data));
-    }
 
-    // Function to restore form data from localStorage
-    function restoreFormData() {
-        const savedData = localStorage.getItem(FORM_DATA_KEY);
-        if (!savedData) return;
-        
-        try {
-            const data = JSON.parse(savedData);
-            
-            // Restore text inputs, textareas, date inputs
-            Object.keys(data).forEach(key => {
-                if (key === 'services') return; // Handle services separately
-                
-                const field = form.querySelector(`[name="${key}"]`);
-                if (field) {
-                    if (field.type === 'radio') {
-                        const radioButton = form.querySelector(`[name="${key}"][value="${data[key]}"]`);
-                        if (radioButton) radioButton.checked = true;
-                    } else if (field.type === 'checkbox') {
-                        // Handle individual checkboxes
-                        field.checked = true;
+        /* Hide navbar on scroll down, show on scroll up */
+        .navbar-hidden {
+            transform: translateY(-100%);
+        }
+
+        .navbar {
+            transition: transform 0.3s ease-in-out;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-transparent" id="main-navbar" style="z-index: 1030;">
+        <div class="container-md">
+            <!-- Logo at the left -->
+            <a class="navbar-brand text-dark fw-bold fs-2" style="font-family: 'Pinyon Script', cursive;"
+                href="/home/">Ariane Mae</a>
+
+            <!-- Toggler at right when collapsed -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapse menu and button -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-transform: uppercase;">
+                <div class="navbar-nav ms-3">
+                    <a class="nav-item nav-link" href="/home/">Home</a>
+                    <a class="nav-item nav-link" href="/services/">Services</a>
+                    <a class="nav-item nav-link" href="/">Portfolio</a>
+                    <a class="nav-item nav-link" href="/story/">Story</a>
+                </div>
+                <!-- Button: far right on desktop, inside menu on mobile -->
+                <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
+                    <style>
+                        .btn-primary-responsive {
+                            display: inline-block;
+                            background-color: #e7456b;
+                            color: #fcfcfc;
+                            padding: 12px 16px;
+                            font-weight: 600;
+                            border: none;
+                            border-radius: 0;
+                            text-decoration: none;
+                            text-align: center;
+                            line-height: 1;
+                            text-transform: uppercase;
+                        }
+
+                        .btn-primary-responsive:hover,
+                        .btn-primary-responsive:focus {
+                            background-color: #d63e64;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+
+                        @media (max-width: 420px) {
+                            .btn-primary-responsive {
+                                /* keep padding consistent on very small screens */
+                                padding: 8px 16px;
+                                font-size: 0.95rem;
+                            }
+
+                            .btn-primary-responsive.btn-block,
+                            .btn-primary-responsive.full-mobile {
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+
+                        /* Utility class for full-width buttons when needed */
+                        .btn-block {
+                            display: inline-block;
+                        }
+                    </style>
+                    <a href="/inquire/" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
+                        Inquire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('main-navbar');
+            const scrollThreshold = 100; // Start hiding after 100px scroll
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Only apply hide/show logic after scrolling past threshold
+                if (scrollTop > scrollThreshold) {
+                    if (scrollTop > lastScrollTop) {
+                        // Scrolling down - hide navbar
+                        navbar.classList.add('navbar-hidden');
                     } else {
-                        field.value = data[key];
+                        // Scrolling up - show navbar
+                        navbar.classList.remove('navbar-hidden');
+                    }
+                } else {
+                    // Always show navbar when near top
+                    navbar.classList.remove('navbar-hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <style>
+        .form-control:invalid,
+        .form-check-input:invalid {
+            border-color: #dc3545;
+        }
+
+        .form-control:invalid:focus,
+        .form-check-input:invalid:focus {
+            box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+        }
+
+        /* Input and textarea backgrounds: 30% opacity of #e7456b */
+        .form-control,
+        .form-select {
+            background-color: rgba(231, 69, 107, 0.3) !important;
+        }
+
+        /* Borders, radios, checkboxes: dark gray at 75% opacity */
+        .form-control,
+        .form-select,
+        .form-floating>.form-control,
+        .form-floating>.form-select,
+        hr,
+        .form-check-input {
+            border-color: rgba(32, 32, 32, 0.75) !important;
+        }
+
+        /* Divider lines */
+        hr {
+            border-top: 1.5px solid rgba(32, 32, 32, 0.75) !important;
+            margin: 0 !important;
+        }
+
+        /* Radio and checkbox checked state: use #e7456b instead of gray */
+        .form-check-input:checked {
+            background-color: #e7456b !important;
+            border-color: #e7456b !important;
+        }
+
+        /* Optional: focus ring for accessibility */
+        .form-check-input:focus {
+            border-color: #e7456b !important;
+            box-shadow: 0 0 0 .25rem rgba(231, 69, 107, 0.25) !important;
+        }
+    </style>
+    <main class="container" style="padding-top: 80px; background-color: #fcfcfc;">
+
+        <!-- Success/Error Messages -->
+        <div id="success-message" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            Your inquiry is in. I'm already excited to learn more about your vision. I'll review your details and get
+            back to you as soon as possible with next steps.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div id="error-message" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+            <span id="error-text"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h1 style="font-family: 'LibreCaslonCondensed';">So… you're the one who's actually ready.</h1>
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Ready to invest in your growth.
+                    Ready to move different. Ready to step into the version of your brand you keep talking about.</p>
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">I only take on a limited number of
+                    clients at a time, so if you're serious about claiming your spot, this is your moment to move.</p>
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px">Fill out the inquiry form. I'll
+                    review it and get back to you ASAP. Let's build something that feels unmistakably you.</p>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-4">
+                <form action="https://formsubmit.co/hello@arianemae.me" method="POST" id="inquire-form" novalidate>
+                    <!-- FormSubmit configuration fields -->
+                    <input type="hidden" name="_subject" value="New Inquiry from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_token" value="" autocomplete="off">
+
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" id="full_name"
+                            value="" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" value=""
+                            required aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll use this to send your confirmation and follow-up
+                            details.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="text" name="location" class="form-control" id="location"
+                            placeholder="City, Region or Country" value="">
+                        <div class="form-text">Where are you based?</div>
+                    </div>
+
+                    <div class="d-flex align-items-center my-3">
+                        <hr class="flex-grow-1">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" name="business_name" class="form-control" placeholder="Business Name"
+                            id="business_name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="url" name="current_website" class="form-control" placeholder="Your Current Website"
+                            id="current_website">
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="url" name="social_url" class="form-control" placeholder="Paste any social URL"
+                            id="social_url" required>
+                        <div class="form-text">This helps us learn more about your visual style.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">How long have you been in business?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="business_length" id="business_less_1"
+                                value="Less than 1 year">
+                            <label class="form-check-label" for="business_less_1">Less than 1 year</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="business_length" id="business_1_3"
+                                value="1–3 years">
+                            <label class="form-check-label" for="business_1_3">1–3 years</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="business_length" id="business_3_5"
+                                value="3–5 years">
+                            <label class="form-check-label" for="business_3_5">3–5 years</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="business_length" id="business_over_5"
+                                value="Over 5 years">
+                            <label class="form-check-label" for="business_over_5">Over 5 years</label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center my-4">
+                        <hr class="flex-grow-1">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Which service(s) are you interested in?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="services[]" id="service_lumpsum"
+                                value="Uh oh, I'm falling in love - Lumpsum Web Design">
+                            <label class="form-check-label" for="service_lumpsum">Uh oh, I'm falling in love - Lumpsum
+                                Web Design</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="services[]" id="service_monthly"
+                                value="Oh no, I'm falling in love again - Monthly Web Design">
+                            <label class="form-check-label" for="service_monthly">Oh no, I'm falling in love again -
+                                Monthly Web Design</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="services[]" id="service_brand"
+                                value="Oh, I'm falling in love - Brand Identity">
+                            <label class="form-check-label" for="service_brand">Oh, I'm falling in love - Brand
+                                Identity</label>
+                        </div>
+                        <div id="services-error" class="text-danger mt-2" style="display: none;">Please select at least
+                            one service.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea class="form-control" name="project_goals" id="project_goals" rows="4"
+                            placeholder="What are you hoping to create? What challenges should this solve?"
+                            required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea class="form-control" name="why_me" id="why_me" rows="3"
+                            placeholder="Why do you want to work with me specifically?" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="launch_date" class="form-label">Do you have a desired launch date?</label>
+                        <input type="date" name="launch_date" class="form-control" id="launch_date">
+                        <div class="form-text">You can estimate if you're unsure.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="url" name="mood_board" class="form-control" id="mood_board"
+                            placeholder="Link to Mood Board / Pinterest Board">
+                    </div>
+
+                    <div class="d-flex align-items-center my-4">
+                        <hr class="flex-grow-1">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Estimated Investment Range</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="investment_range" id="budget_1k_2k"
+                                value="$1,000 - $2,000" required>
+                            <label class="form-check-label" for="budget_1k_2k">$1,000 - $2,000</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="investment_range" id="budget_2k_3k"
+                                value="$2,000 – $3,000">
+                            <label class="form-check-label" for="budget_2k_3k">$2,000 – $3,000</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="investment_range" id="budget_3k_4k"
+                                value="$3,000 – $4,000">
+                            <label class="form-check-label" for="budget_3k_4k">$3,000 – $4,000</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="investment_range" id="budget_5k"
+                                value="$5,000+">
+                            <label class="form-check-label" for="budget_5k">$5,000+</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">How ready are you to get started?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="readiness" id="ready_lets_do"
+                                value="Let's do this">
+                            <label class="form-check-label" for="ready_lets_do">Let's do this</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="readiness" id="ready_questions"
+                                value="I'm interested but have questions">
+                            <label class="form-check-label" for="ready_questions">I'm interested but have
+                                questions</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="readiness" id="ready_exploring"
+                                value="I'm exploring options">
+                            <label class="form-check-label" for="ready_exploring">I'm exploring options</label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center my-4">
+                        <hr class="flex-grow-1">
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="text" name="how_heard" class="form-control" id="how_heard"
+                            placeholder="How did you hear about me?" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea class="form-control" name="extra_context" id="extra_context" rows="3"
+                            placeholder="Any extra context you'd like to share"></textarea>
+                    </div>
+
+                    <button type="submit" class="inquire-btn w-lg-auto btn-primary-responsive">
+                        Secure My Quote
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="w-100 pb-4" style="background-color: #761f3c; padding-top: 80px; margin: 0;">
+            <div class="container-fluid" style="padding-bottom: 40px; max-width: 500px;">
+                <div class="row">
+                    <div class="col-md-12 pb-4 text-center">
+                        <h1 style="font-family: 'LibreCaslonCondensed', serif; color: #fcfcfc; margin-bottom: 20px;">Get
+                            ready to show up like the brand you dream of</h1>
+                        <a href="/inquire/"
+                            style="font-family: 'LibreCaslonCondensed', serif; font-style: italic; font-weight: bold; color: #ffb5c6ff; text-decoration: underline; font-size: 18px;">Get
+                            Started</a>
+                    </div>
+                    <div class="col-md-12">
+                        <nav style="margin-bottom: 20px; display: flex; justify-content: center; gap: 30px;">
+                            <a href="/home/"
+                                style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Home</a>
+                            <a href="/services/"
+                                style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Services</a>
+                            <a href="/"
+                                style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Portfolio</a>
+                            <a href="/story/"
+                                style="font-family: 'AktivGrotesk', sans-serif; font-size: 16px; color: #fcfcfc; text-decoration: none; text-transform: uppercase;">Story</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center m-0"
+                style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #fcfcfc; margin-bottom: 20px;">
+                &copy; 2025 Ariane Mae</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('inquire-form');
+                const serviceLumpsum = document.getElementById('service_lumpsum');
+                const serviceMonthly = document.getElementById('service_monthly');
+                const servicesCheckboxes = document.querySelectorAll('input[name="services[]"]');
+                const servicesError = document.getElementById('services-error');
+                const FORM_DATA_KEY = 'inquire_form_data';
+
+                // Check for success parameter in URL
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('success')) {
+                    document.getElementById('success-message').classList.remove('d-none');
+                    // Remove the success parameter from URL without page reload
+                    const newUrl = window.location.href.split('?')[0];
+                    window.history.replaceState({}, document.title, newUrl);
+                }
+
+                // Function to save form data to localStorage
+                function saveFormData() {
+                    const formData = new FormData(form);
+                    const data = {};
+
+                    // Handle regular inputs
+                    for (let [key, value] of formData.entries()) {
+                        if (key === 'services[]') {
+                            if (!data.services) data.services = [];
+                            data.services.push(value);
+                        } else {
+                            data[key] = value;
+                        }
+                    }
+
+                    localStorage.setItem(FORM_DATA_KEY, JSON.stringify(data));
+                }
+
+                // Function to restore form data from localStorage
+                function restoreFormData() {
+                    const savedData = localStorage.getItem(FORM_DATA_KEY);
+                    if (!savedData) return;
+
+                    try {
+                        const data = JSON.parse(savedData);
+
+                        // Restore text inputs, textareas, date inputs
+                        Object.keys(data).forEach(key => {
+                            if (key === 'services') return; // Handle services separately
+
+                            const field = form.querySelector(`[name="${key}"]`);
+                            if (field) {
+                                if (field.type === 'radio') {
+                                    const radioButton = form.querySelector(`[name="${key}"][value="${data[key]}"]`);
+                                    if (radioButton) radioButton.checked = true;
+                                } else if (field.type === 'checkbox') {
+                                    // Handle individual checkboxes
+                                    field.checked = true;
+                                } else {
+                                    field.value = data[key];
+                                }
+                            }
+                        });
+
+                        // Restore services checkboxes
+                        if (data.services) {
+                            data.services.forEach(serviceValue => {
+                                const checkbox = form.querySelector(`[name="services[]"][value="${serviceValue}"]`);
+                                if (checkbox) checkbox.checked = true;
+                            });
+                        }
+                    } catch (error) {
+                        console.log('Error restoring form data:', error);
                     }
                 }
-            });
-            
-            // Restore services checkboxes
-            if (data.services) {
-                data.services.forEach(serviceValue => {
-                    const checkbox = form.querySelector(`[name="services[]"][value="${serviceValue}"]`);
-                    if (checkbox) checkbox.checked = true;
+
+                // Function to clear saved data
+                function clearFormData() {
+                    localStorage.removeItem(FORM_DATA_KEY);
+                }
+
+                // Add event listeners to all form inputs for auto-save
+                function addAutoSaveListeners() {
+                    const inputs = form.querySelectorAll('input, textarea, select');
+                    inputs.forEach(input => {
+                        input.addEventListener('input', saveFormData);
+                        input.addEventListener('change', saveFormData);
+                    });
+                }
+
+                function validateServices() {
+                    let oneChecked = false;
+                    servicesCheckboxes.forEach(function (checkbox) {
+                        if (checkbox.checked) {
+                            oneChecked = true;
+                        }
+                    });
+                    if (!oneChecked) {
+                        servicesError.style.display = 'block';
+                        return false;
+                    } else {
+                        servicesError.style.display = 'none';
+                        return true;
+                    }
+                }
+
+                // Mutual exclusivity for lumpsum and monthly services
+                serviceLumpsum.addEventListener('change', function () {
+                    if (this.checked) {
+                        serviceMonthly.disabled = true;
+                    } else {
+                        serviceMonthly.disabled = false;
+                    }
+                    saveFormData(); // Save after change
                 });
-            }
-        } catch (error) {
-            console.log('Error restoring form data:', error);
-        }
-    }
 
-    // Function to clear saved data
-    function clearFormData() {
-        localStorage.removeItem(FORM_DATA_KEY);
-    }
+                serviceMonthly.addEventListener('change', function () {
+                    if (this.checked) {
+                        serviceLumpsum.disabled = true;
+                    } else {
+                        serviceLumpsum.disabled = false;
+                    }
+                    saveFormData(); // Save after change
+                });
 
-    // Add event listeners to all form inputs for auto-save
-    function addAutoSaveListeners() {
-        const inputs = form.querySelectorAll('input, textarea, select');
-        inputs.forEach(input => {
-            input.addEventListener('input', saveFormData);
-            input.addEventListener('change', saveFormData);
-        });
-    }
+                form.addEventListener('submit', function (event) {
+                    console.log('Form submission started');
+                    const servicesValid = validateServices();
+                    const formValid = form.checkValidity();
 
-    function validateServices() {
-        let oneChecked = false;
-        servicesCheckboxes.forEach(function(checkbox) {
-            if (checkbox.checked) {
-                oneChecked = true;
-            }
-        });
-        if (!oneChecked) {
-            servicesError.style.display = 'block';
-            return false;
-        } else {
-            servicesError.style.display = 'none';
-            return true;
-        }
-    }
+                    console.log('Services valid:', servicesValid);
+                    console.log('Form valid:', formValid);
 
-    // Mutual exclusivity for lumpsum and monthly services
-    serviceLumpsum.addEventListener('change', function() {
-        if (this.checked) {
-            serviceMonthly.disabled = true;
-        } else {
-            serviceMonthly.disabled = false;
-        }
-        saveFormData(); // Save after change
-    });
+                    if (!formValid || !servicesValid) {
+                        console.log('Form validation failed, preventing submission');
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        console.log('Form validation passed, submitting');
+                        // Clear saved data on successful submission
+                        clearFormData();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
 
-    serviceMonthly.addEventListener('change', function() {
-        if (this.checked) {
-            serviceLumpsum.disabled = true;
-        } else {
-            serviceLumpsum.disabled = false;
-        }
-        saveFormData(); // Save after change
-    });
-
-    form.addEventListener('submit', function (event) {
-        console.log('Form submission started');
-        const servicesValid = validateServices();
-        const formValid = form.checkValidity();
-        
-        console.log('Services valid:', servicesValid);
-        console.log('Form valid:', formValid);
-        
-        if (!formValid || !servicesValid) {
-            console.log('Form validation failed, preventing submission');
-            event.preventDefault();
-            event.stopPropagation();
-        } else {
-            console.log('Form validation passed, submitting');
-            // Clear saved data on successful submission
-            clearFormData();
-        }
-        form.classList.add('was-validated');
-    }, false);
-
-    // Initialize: restore saved data and set up auto-save
-    restoreFormData();
-    addAutoSaveListeners();
-});
-</script>
+                // Initialize: restore saved data and set up auto-save
+                restoreFormData();
+                addAutoSaveListeners();
+            });
+        </script>
 </body>
 
 </html>
-            <div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
-                <style>
-.btn-primary-responsive {
-  display: inline-block;
-  background-color: #e7456b;
-  color: #fcfcfc;
-  padding: 12px 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 0;
-  text-decoration: none;
-  text-align: center;
-  line-height: 1;
-  text-transform: uppercase;
-}
+<div class="d-lg-flex ms-lg-auto mt-3 mt-lg-0">
+    <style>
+        .btn-primary-responsive {
+            display: inline-block;
+            background-color: #e7456b;
+            color: #fcfcfc;
+            padding: 12px 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 0;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1;
+            text-transform: uppercase;
+        }
 
-.btn-primary-responsive:hover,
-.btn-primary-responsive:focus {
-  background-color: #d63e64;
-  color: #fff;
-  text-decoration: none;
-}
+        .btn-primary-responsive:hover,
+        .btn-primary-responsive:focus {
+            background-color: #d63e64;
+            color: #fff;
+            text-decoration: none;
+        }
 
-@media (max-width: 420px) {
-  .btn-primary-responsive {
-    /* keep padding consistent on very small screens */
-    padding: 8px 16px;
-    font-size: 0.95rem;
-  }
+        @media (max-width: 420px) {
+            .btn-primary-responsive {
+                /* keep padding consistent on very small screens */
+                padding: 8px 16px;
+                font-size: 0.95rem;
+            }
 
-  .btn-primary-responsive.btn-block,
-  .btn-primary-responsive.full-mobile {
-    display: block;
-    width: 100%;
-  }
-}
+            .btn-primary-responsive.btn-block,
+            .btn-primary-responsive.full-mobile {
+                display: block;
+                width: 100%;
+            }
+        }
 
-/* Utility class for full-width buttons when needed */
-.btn-block {
-  display: inline-block;
-}
-</style>
-    <a href="./inquire.html" class="inquire-btn w-100 w-lg-auto btn-primary-responsive">
-        Inquire
-    </a>
-            </div>
-        </div>
-    </div>
-</nav>
+        /* Utility class for full-width buttons when needed */
+        .btn-block {
+            display: inline-block;
+        }
+    </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('main-navbar');
-    const scrollThreshold = 100; // Start hiding after 100px scroll
+    document.addEventListener('DOMContentLoaded', function () {
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('main-navbar');
+        const scrollThreshold = 100; // Start hiding after 100px scroll
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Only apply hide/show logic after scrolling past threshold
-        if (scrollTop > scrollThreshold) {
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down - hide navbar
-                navbar.classList.add('navbar-hidden');
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Only apply hide/show logic after scrolling past threshold
+            if (scrollTop > scrollThreshold) {
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down - hide navbar
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    // Scrolling up - show navbar
+                    navbar.classList.remove('navbar-hidden');
+                }
             } else {
-                // Scrolling up - show navbar
+                // Always show navbar when near top
                 navbar.classList.remove('navbar-hidden');
             }
-        } else {
-            // Always show navbar when near top
-            navbar.classList.remove('navbar-hidden');
-        }
-        
-        lastScrollTop = scrollTop;
+
+            lastScrollTop = scrollTop;
+        });
     });
-});
 </script>
 
 </html>
-
