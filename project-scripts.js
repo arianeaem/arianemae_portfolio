@@ -32,14 +32,17 @@ function populateProjectFromId() {
     return;
   }
 
+  // Populate project title section
   const nameEl = document.getElementById('proj-business-name');
-  const imgEl = document.getElementById('proj-image');
-  const businessCatEl = document.getElementById('proj-business-category');
-  const projectCatEl = document.getElementById('proj-project-category');
-  const descEl = document.getElementById('proj-description');
+  const descriptorEl = document.getElementById('proj-descriptor');
+  const outcomeEl = document.getElementById('proj-outcome');
 
   if (nameEl) nameEl.textContent = data.businessName || '';
-  // keep the header (ariane-logo) as the site logo text; do not overwrite it
+  if (descriptorEl && data.descriptor) descriptorEl.textContent = data.descriptor;
+  if (outcomeEl && data.outcome) outcomeEl.textContent = data.outcome;
+
+  // Populate hero image
+  const imgEl = document.getElementById('proj-image');
   if (imgEl) {
     // prefer gallery first (allows multiple project images like 1 / 2 each with 1x/2x)
     if (Array.isArray(data.gallery) && data.gallery.length > 0) {
@@ -61,6 +64,81 @@ function populateProjectFromId() {
       // set a default intrinsic size for the hero image to reduce layout shift
       try { imgEl.setAttribute('width', '900'); imgEl.setAttribute('height', '675'); } catch(e){}
   }
+
+  // Populate Project Overview section
+  const executiveSummaryEl = document.getElementById('proj-executive-summary');
+  if (executiveSummaryEl && data.executiveSummary) {
+    executiveSummaryEl.textContent = data.executiveSummary;
+  }
+
+  // Populate Focus
+  const focusEl = document.getElementById('proj-focus');
+  if (focusEl && data.focus) focusEl.textContent = data.focus;
+
+  // Populate My Role
+  const roleDescEl = document.getElementById('proj-role-desc');
+  if (roleDescEl && data.roleDescription) roleDescEl.textContent = data.roleDescription;
+
+  // Populate Timeline
+  const timelineDatesEl = document.getElementById('proj-timeline-dates');
+  if (timelineDatesEl && data.timelineDates) timelineDatesEl.textContent = data.timelineDates;
+
+  // Populate Deliverables
+  const deliverablesEl = document.getElementById('proj-deliverables');
+  if (deliverablesEl && data.deliverables) {
+    if (typeof data.deliverables === 'string') {
+      deliverablesEl.textContent = data.deliverables;
+    }
+  }
+
+  // Populate Challenge section
+  const challengeStatementEl = document.getElementById('proj-challenge-statement');
+  if (challengeStatementEl && data.challengeStatement) {
+    challengeStatementEl.textContent = data.challengeStatement;
+  }
+
+  // Populate Strategy & Approach section
+  const approachIntroEl = document.getElementById('proj-approach-intro');
+  if (approachIntroEl && data.approachIntro) {
+    approachIntroEl.textContent = data.approachIntro;
+  }
+
+  // Populate Key UX Principles
+  if (data.principles && Array.isArray(data.principles)) {
+    data.principles.forEach((principle, idx) => {
+      const principleEl = document.getElementById(`proj-principle-${idx + 1}`);
+      if (principleEl) principleEl.textContent = principle;
+    });
+  }
+
+  // Populate Key Design Decisions Overview
+  const decisionOverviewEl = document.getElementById('proj-decision-overview');
+  if (decisionOverviewEl && data.decisionOverview) {
+    decisionOverviewEl.textContent = data.decisionOverview;
+  }
+
+  // Populate Individual Design Decisions
+  if (data.decisions && Array.isArray(data.decisions)) {
+    data.decisions.forEach((decision, idx) => {
+      const titleEl = document.getElementById(`proj-decision-${idx + 1}-title`);
+      const descEl = document.getElementById(`proj-decision-${idx + 1}-desc`);
+      if (titleEl && decision.title) titleEl.textContent = decision.title;
+      if (descEl && decision.description) descEl.textContent = decision.description;
+    });
+  }
+
+  // Populate Self-Reflection Cards
+  if (data.reflections && Array.isArray(data.reflections)) {
+    data.reflections.forEach((reflection, idx) => {
+      const reflectionEl = document.getElementById(`proj-reflection-${idx + 1}`);
+      if (reflectionEl) reflectionEl.textContent = reflection;
+    });
+  }
+
+  // Legacy fields (backward compatibility)
+  const businessCatEl = document.getElementById('proj-business-category');
+  const projectCatEl = document.getElementById('proj-project-category');
+  const descEl = document.getElementById('proj-description');
   if (businessCatEl) businessCatEl.textContent = data.businessCategory || '';
   if (projectCatEl) projectCatEl.textContent = data.projectCategory || '';
   if (descEl) descEl.textContent = data.description || '';

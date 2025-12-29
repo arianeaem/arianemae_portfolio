@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400&display=swap');
 /* Load Cormorant Garamond (italics + 500 weight) per user request */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
 
@@ -11,9 +12,9 @@
 
   /* font families */
   /* use Libre Caslon Text as the primary type per user request (removed Inter) */
-  --font-family-sans: 'Libre Caslon Text', serif;
-  --font-family-serif: 'Libre Caslon Text', serif;
-  --font-family-display: 'Libre Caslon Text', serif;
+  --font-family-sans: 'Libre Caslon Condensed', serif;
+  --font-family-serif: 'Libre Caslon Condensed', serif;
+  --font-family-display: 'Libre Caslon Condensed', serif;
   /* slim transform values for a visually condensed/slim look */
   /* tuned slimming: slightly less aggressive so text reads better */
   --display-slim-scale-x: 0.82;
@@ -110,7 +111,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 html {
   background-color: #fcfcfc;
   color: #202020;
-  /* use the requested Libre Caslon Text across the site */
+  /* use the requested Libre Caslon Condensed across the site */
   font-family: var(--font-family-sans);
   font-weight: var(--fw-regular);
   font-size: var(--base-font-size);
@@ -131,7 +132,6 @@ html {
 .skip-link:focus {
   left: 16px;
   top: 16px;
-  border-radius: 6px;
 }
 
 /* Focus indicators for keyboard users — use brand color and prefer :focus-visible */
@@ -206,6 +206,7 @@ header nav ul li {
     background-color: #e7456b; /* darker accent for better contrast */
     color: #fcfcfc;
     padding: 8px 16px;
+    border: none;
   }
 
 .header-back:hover {
@@ -264,6 +265,7 @@ p, .project-meta p, .about-links a {
   font-size: var(--body-size);
   line-height: var(--lh-paragraph);
   letter-spacing: var(--ls-body);
+  font-family: 'Aktiv Grotesk', sans-serif;
 }
 
 small, .caption {
@@ -451,7 +453,6 @@ small, .caption {
   font-weight: 400;
   font-size: 37.9px;
   line-height: 1.1;
-  border-radius: 6px;
   letter-spacing: -1px;
   display: inline-block;
   transform-origin: center;
@@ -596,7 +597,6 @@ img {
   max-width: 900px; /* limit gallery images to 900px as requested */
   object-fit: cover;
   display: block;
-  border-radius: 6px;
   border: 0;
 }
 
@@ -848,6 +848,381 @@ body.contact-open {
     white-space: normal;
     hyphens: auto;
     word-break: break-word;
+  }
+}
+
+/* ===== UX CASE STUDY TEMPLATE STYLES ===== */
+
+/* Project Title Section */
+.project-title-section {
+  max-width: 900px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: var(--display-large-size);
+  font-weight: var(--fw-semi);
+  margin: 0 0 16px;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display-large);
+  transform: scaleX(var(--display-slim-scale-x)) scaleY(var(--display-slim-scale-y));
+  display: inline-block;
+}
+
+.project-descriptor {
+  font-size: var(--body-xl-size);
+  color: #666;
+  margin: 0 0 24px;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.project-outcome {
+  font-size: var(--h5-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 40px;
+  line-height: var(--lh-paragraph);
+  color: #202020;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+/* Project Overview Section */
+.project-overview {
+  max-width: 1200px;
+  margin: 64px auto;
+  padding: 0 60px;
+}
+
+.overview-title {
+  font-size: var(--h3-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 32px;
+  color: #202020;
+  font-family: var(--font-family-sans);
+}
+
+.overview-content {
+  margin-bottom: 48px;
+}
+
+.overview-text {
+  font-size: var(--body-xl-size);
+  line-height: var(--lh-paragraph);
+  margin: 0 0 32px;
+  color: #202020;
+  max-width: 1000px;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.info-card {
+  background: rgba(231, 69, 107, 0.3);
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.info-card h3 {
+  font-size: var(--h5-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 16px;
+  color: #202020;
+  font-family: var(--font-family-sans);
+}
+
+.info-card .card-content {
+  margin: 0;
+  font-size: var(--body-size);
+  line-height: var(--lh-paragraph);
+  color: #202020;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+/* Project Challenge Section */
+.project-challenge {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+.challenge-content {
+  background: rgba(231, 69, 107, 0.3);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.challenge-title {
+  font-size: var(--h2-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 32px;
+  color: #202020;
+  font-family: var(--font-family-sans);
+}
+
+.challenge-box {
+  margin: 0;
+}
+
+.challenge-box p {
+  font-size: var(--h6-size);
+  line-height: var(--lh-paragraph);
+  margin: 0;
+  font-weight: var(--fw-medium);
+  color: #202020;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+/* Section title and sublabel styles - consistent across all sections */
+.section-sublabel {
+  font-size: var(--body-sm-size);
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--fw-semi);
+  font-family: 'Aktiv Grotesk', sans-serif;
+  margin: 0 0 12px;
+}
+
+.section-title {
+  font-size: var(--h2-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 32px;
+  color: #202020;
+  font-family: var(--font-family-sans);
+  line-height: var(--lh-display);
+}
+
+/* Strategy & UX Approach Section */
+.strategy-approach {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+.approach-context {
+  margin-bottom: 48px;
+}
+
+.approach-context p {
+  font-size: var(--body-xl-size);
+  line-height: var(--lh-paragraph);
+  margin: 0 0 20px;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.principles-section {
+  margin-top: 40px;
+}
+
+.principles-section h3 {
+  font-size: var(--h4-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 24px;
+  font-family: 'Aktiv Grotesk', sans-serif;
+}
+
+.pill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.principle-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #202020;
+  padding: 40px 28px;
+  border-right: 1px solid #202020;
+  font-size: var(--h6-size);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.4;
+  font-family: 'Libre Caslon Condensed', serif;
+  min-height: 180px;
+}
+
+.principle-pill:last-child {
+  border-right: none;
+}
+
+/* Solution Section */
+.project-solution {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+/* Key Design Decisions Section */
+.design-decisions {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+.decision-overview {
+  background: rgba(231, 69, 107, 0.3);
+  padding: 40px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.decision-overview p {
+  font-size: var(--body-xl-size);
+  line-height: var(--lh-paragraph);
+  margin: 0;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.decisions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.decision-item {
+  padding: 0;
+  background: transparent;
+}
+
+.decision-title {
+  font-size: var(--h4-size);
+  font-weight: var(--fw-medium);
+  margin: 0 0 16px;
+  font-family: 'Libre Caslon Condensed', serif;
+}
+
+.decision-description {
+  font-size: var(--body-xl-size);
+  line-height: var(--lh-paragraph);
+  margin: 0;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 400;
+}
+
+/* Self-Reflection Section */
+.self-reflection {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.reflection-card {
+  background: rgba(231, 69, 107, 0.3);
+  padding: 32px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+.reflection-card p {
+  font-size: var(--body-lg-size);
+  line-height: var(--lh-paragraph);
+  margin: 0;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  font-weight: 400;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+  .project-overview {
+    padding: 0 24px;
+  }
+  
+  .overview-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .pill-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .principle-pill {
+    border-right: none;
+    border-bottom: 1px solid #202020;
+    padding: 24px 20px;
+    min-height: 100px;
+  }
+  
+  .principle-pill:last-child {
+    border-bottom: none;
+  }
+  
+  .executive-summary {
+    padding: 24px;
+  }
+  
+  .challenge-box {
+    padding: 24px;
+  }
+  
+  .section-title {
+    font-size: calc(var(--display-medium-size) * 0.7);
+  }
+  
+  .project-title {
+    font-size: calc(var(--display-large-size) * 0.7);
+  }
+  
+  .reflection-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .reflection-card {
+    padding: 24px;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-overview,
+  .project-challenge,
+  .strategy-approach,
+  .project-solution,
+  .design-decisions,
+  .self-reflection {
+    padding: 0 16px;
+    margin: 48px auto;
+  }
+  
+  .info-card {
+    padding: 20px 16px;
+  }
+  
+  .principle-pill {
+    padding: 12px 20px;
+    font-size: var(--body-sm-size);
   }
 }
 
