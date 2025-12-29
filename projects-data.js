@@ -76,15 +76,19 @@ window.PROJECTS = {
     "decisions": [
       {
         "title": "Structured Page Flow",
-        "description": "I designed the page to follow a clear progression—from value and framework to offers, trust, and action—so users could orient themselves quickly and move through the site with confidence rather than uncertainty."
+        "description": "I designed the page to follow a clear progression from value and framework to offers, trust, and action—so users could orient themselves quickly and move through the site with confidence rather than uncertainty.",
+        "image": "/images/marra-patel-1-2x.webp"
       },
       {
         "title": "Framework-Led Orientation",
-        "description": "Marra's signature framework was positioned early in the experience to establish credibility and give users a mental model for how her mentorship works before introducing specific offers."
+        "description": "Marra's signature framework was positioned early in the experience to establish credibility and give users a mental model for how her mentorship works before introducing specific offers.",
+        "image": "/images/marra-patel-3-1x.webp",
+        "image2x": "/images/marra-patel-3-2x.webp"
       },
       {
         "title": "Intentional CTA Placement",
-        "description": "Calls to action were limited and placed after moments of clarity or trust, ensuring users were invited to act when they felt ready, not pressured, which supports higher-quality conversions."
+        "description": "Calls to action were limited and placed after moments of clarity or trust, ensuring users were invited to act when they felt ready, not pressured, which supports higher-quality conversions.",
+        "image": "/images/marra-patel-4-1x.png"
       }
     ],
     "reflections": [

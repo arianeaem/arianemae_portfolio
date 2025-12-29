@@ -122,8 +122,21 @@ function populateProjectFromId() {
     data.decisions.forEach((decision, idx) => {
       const titleEl = document.getElementById(`proj-decision-${idx + 1}-title`);
       const descEl = document.getElementById(`proj-decision-${idx + 1}-desc`);
+      const imageEl = document.getElementById(`proj-decision-${idx + 1}-image`);
       if (titleEl && decision.title) titleEl.textContent = decision.title;
       if (descEl && decision.description) descEl.textContent = decision.description;
+      if (imageEl && decision.image) {
+        imageEl.src = decision.image;
+        imageEl.alt = decision.title || 'Decision visualization';
+        // set intrinsic dimensions if available
+        if (decision.imageWidth && decision.imageHeight) {
+          imageEl.setAttribute('width', decision.imageWidth);
+          imageEl.setAttribute('height', decision.imageHeight);
+        }
+      } else if (imageEl) {
+        // hide image if no source provided
+        imageEl.style.display = 'none';
+      }
     });
   }
 
