@@ -875,7 +875,7 @@ body.contact-open {
   font-size: var(--body-xl-size);
   color: #666;
   margin: 0 0 24px;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
 }
 
@@ -885,7 +885,7 @@ body.contact-open {
   margin: 0 0 40px;
   line-height: var(--lh-paragraph);
   color: #202020;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Project Overview Section */
@@ -913,7 +913,7 @@ body.contact-open {
   margin: 0 0 32px;
   color: #202020;
   max-width: 1000px;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .info-grid {
@@ -942,7 +942,7 @@ body.contact-open {
   font-size: var(--body-size);
   line-height: var(--lh-paragraph);
   color: #202020;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Project Challenge Section */
@@ -979,7 +979,7 @@ body.contact-open {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Section title and sublabel styles - consistent across all sections */
@@ -1007,6 +1007,7 @@ body.contact-open {
   max-width: 1200px;
   margin: 80px auto;
   padding: 0 60px;
+  scroll-margin-top: 80px;
 }
 
 .approach-context {
@@ -1017,7 +1018,7 @@ body.contact-open {
   font-size: var(--body-xl-size);
   line-height: var(--lh-paragraph);
   margin: 0 0 20px;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
 }
 
@@ -1084,7 +1085,7 @@ body.contact-open {
   font-size: var(--body-xl-size);
   line-height: var(--lh-paragraph);
   margin: 0;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
 }
 
@@ -1110,7 +1111,7 @@ body.contact-open {
   font-size: var(--body-xl-size);
   line-height: var(--lh-paragraph);
   margin: 0;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
 
@@ -1143,7 +1144,7 @@ body.contact-open {
   font-size: var(--body-lg-size);
   line-height: var(--lh-paragraph);
   margin: 0;
-  font-family: 'Aktiv Grotesk', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
 
@@ -1231,7 +1232,7 @@ body.contact-open {
   
   .principle-pill {
     padding: 12px 20px;
-    font-size: var(--body-sm-size);
+    font-size: var(--body-xl-size);
   }
 }
 

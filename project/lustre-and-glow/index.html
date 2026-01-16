@@ -3,15 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lustre &amp; Glow — Project | Ariane Mae</title>
-  <meta name="description" content="Lustre &amp; Glow — a branding & web design case study by Ariane Mae. Explore the redesign and portfolio highlights." />
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Project — details</title>
+  <link rel="stylesheet" href="../../style.css">
+  <!-- Performance: preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="canonical" href="https://arianemae.me/project/lustre-and-glow/">
-    <link rel="icon" href="/images/ariane-mae-icon.svg" type="image/svg+xml">
+  <!-- Site icons -->
+  <link rel="icon" href="/images/ariane-mae-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/ariane-mae-icon.svg">
+  <!-- Meta placeholders populated by JS for SEO on project pages -->
+  <meta name="description" id="meta-description" content="Project details by Ariane Mae">
+  <meta property="og:title" id="og-title" content="Project — Ariane Mae">
+  <meta property="og:description" id="og-description" content="Project details by Ariane Mae">
+  <meta property="og:image" id="og-image" content="">
   </head>
   <body>
+    <!-- Skip link for keyboard users -->
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
       <h1 id="ariane-logo">Ariane Mae</h1>
@@ -24,18 +32,148 @@
     </header>
 
   <main id="main-content" tabindex="-1">
-      <section id="project-detail">
-        <h2 id="proj-business-name" class="project-business-name"></h2>
-        <div class="project-meta">
-          <p id="proj-business-category" class="proj-business-category"></p>
-          <p id="proj-project-category" class="proj-project-category"></p>
-          <div id="proj-description"></div>
-        </div>
-        <div class="project-hero">
-          <img id="proj-image" src="" alt="Project image">
-        </div>
-        <div id="proj-gallery" class="proj-gallery" aria-label="Project gallery"></div>
+      <!-- Project Title Section -->
+      <section class="project-title-section">
+        <h1 id="proj-business-name" class="project-title"></h1>
+        <p class="project-descriptor" id="proj-descriptor">Short descriptor of what you designed</p>
+        <p class="project-outcome" id="proj-outcome">One-line outcome statement.</p>
       </section>
+
+      <!-- Project Hero Image -->
+      <section class="project-hero">
+        <img id="proj-image" src="" alt="Project image">
+      </section>
+
+      <!-- Gallery thumbnails (populated by JS when a project has multiple images) -->
+      <div id="proj-gallery" class="proj-gallery" aria-label="Project gallery"></div>
+
+      <!-- Project Overview Section -->
+      <section class="project-overview">
+        <h2 class="overview-title">Background</h2>
+        
+        <div class="overview-content">
+          <p class="overview-text" id="proj-executive-summary">
+            [Executive Summary: 2-3 sentences explaining the project's goal and your primary contribution.]
+          </p>
+          <button class="primary-button" onclick="document.getElementById('strategy-approach').scrollIntoView({behavior: 'smooth'})">
+            Skip To Solution
+          </button>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>My Role</h3>
+            <p class="card-content" id="proj-role-desc">
+              Research | Conceptualizing | User Testing | Visual Design | Prototyping
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Timeline</h3>
+            <p class="card-content" id="proj-timeline-dates">Jan 2024 - May 2024 (13 Weeks)</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Deliverables</h3>
+            <p class="card-content" id="proj-deliverables">Wireframes | Prototypes | Usability Reports</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Challenge Section -->
+      <section class="project-challenge">
+        <div class="challenge-content">
+          <h2 class="challenge-title">The Challenge</h2>
+          
+          <div class="challenge-box">
+            <p id="proj-challenge-statement">
+              [1 sentence describing the core challenge or problem you needed to solve.]
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategy & UX Approach Section -->
+      <section id="strategy-approach" class="strategy-approach">
+        <p class="section-sublabel">How I approached the solution</p>
+        <h2 class="section-title">Strategy & UX Approach</h2>
+
+        <div class="approach-context">
+          <p id="proj-approach-intro">
+            [2-3 sentences explaining your strategic approach to solving the challenge.]
+          </p>
+        </div>
+
+        <div class="principles-section">
+          <h3>Key UX Principles</h3>
+          <div class="pill-grid">
+            <span class="principle-pill" id="proj-principle-1">[Short principle, 3-6 words]</span>
+            <span class="principle-pill" id="proj-principle-2">[Short principle, 3-6 words]</span>
+            <span class="principle-pill" id="proj-principle-3">[Short principle, 3-6 words]</span>
+            <span class="principle-pill" id="proj-principle-4">[Short principle, 3-6 words]</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Design Decisions Section -->
+      <section class="design-decisions">
+        <p class="section-sublabel">What I designed</p>
+        <h2 class="section-title">Key Design Decisions</h2>
+        
+        <div class="decision-overview">
+          <p id="proj-decision-overview">
+            [1-2 sentences providing general context for your design decisions.]
+          </p>
+        </div>
+
+        <div class="decisions-list">
+          <div class="decision-item">
+            <img class="decision-image" id="proj-decision-1-image" src="" alt="Decision visualization">
+            <h3 class="decision-title" id="proj-decision-1-title">[Decision Title: 3-5 words]</h3>
+            <p class="decision-description" id="proj-decision-1-desc">[1-2 sentences explaining this decision and its impact.]</p>
+          </div>
+
+          <div class="decision-item">
+            <img class="decision-image" id="proj-decision-2-image" src="" alt="Decision visualization">
+            <h3 class="decision-title" id="proj-decision-2-title">[Decision Title: 3-5 words]</h3>
+            <p class="decision-description" id="proj-decision-2-desc">[1-2 sentences explaining this decision and its impact.]</p>
+          </div>
+
+          <div class="decision-item">
+            <img class="decision-image" id="proj-decision-3-image" src="" alt="Decision visualization">
+            <h3 class="decision-title" id="proj-decision-3-title">[Decision Title: 3-5 words]</h3>
+            <p class="decision-description" id="proj-decision-3-desc">[1-2 sentences explaining this decision and its impact.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Self-Reflection Section -->
+      <section class="self-reflection">
+        <h2 class="section-title">Self-Reflection</h2>
+        
+        <div class="reflection-grid">
+          <div class="reflection-card">
+            <p id="proj-reflection-1">[1-2 sentences reflecting on what you learned or key insight.]</p>
+          </div>
+
+          <div class="reflection-card">
+            <p id="proj-reflection-2">[1-2 sentences reflecting on what you learned or key insight.]</p>
+          </div>
+
+          <div class="reflection-card">
+            <p id="proj-reflection-3">[1-2 sentences reflecting on what you learned or key insight.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legacy project metadata (hidden but kept for backward compatibility) -->
+      <div style="display: none;">
+        <p id="proj-business-category" class="proj-business-category"></p>
+        <p id="proj-project-category" class="proj-project-category"></p>
+        <div id="proj-description"></div>
+      </div>
+    </section>
+      <!-- Next project teaser -->
       <div id="next-project-wrap">
   <div class="next-project" data-next-id="" tabindex="0" role="link" aria-label="View next project">
           <div class="next-project-label">VIEW NEXT PROJECT</div>
@@ -49,9 +187,6 @@
       <p>© 2025 Ariane Mae</p>
     </footer>
 
-    <script>/* set path-based id so project-scripts can pick it up */
-      // when this file is visited directly, the pathname already has the slug; project-scripts will read it.
-    </script>
     <script src="../../projects-data.js" defer></script>
     <script src="../../project-scripts.js" defer></script>
   </body>
