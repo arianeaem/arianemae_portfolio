@@ -7,14 +7,46 @@ window.PROJECTS = {
     "projectCategory": "Branding & Web Design",
     "description": "A self-initiated redesign for Lustre & Glow, a luxury Toronto salon. The goal was to transform a dense, outdated site into a clean, editorial experience that highlights premium services, improves readability, and drives bookings through a refined, user-first design.",
     // New UX Case Study fields
-    "descriptor": "A luxury salon website redesign focused on user experience",
-    "outcome": "Increased bookings by 45% and reduced bounce rate by 30%",
-    "executiveSummary": "I redesigned Lustre & Glow's website to create a premium, user-friendly experience that showcases their services while simplifying the booking process. The new design increased conversions and established their digital presence as a leader in luxury salon experiences.",
+    "descriptor": "A modern, luxury-inspired salon website redesign",
+    "outcome": "A modern, luxury-inspired website redesign for a Toronto-based hair and laser salon, focused on improving readability, strengthening brand perception, and increasing appointment bookings through a simplified user journey.",
+    "executiveSummary": "Lustre & Glow is a Toronto-based hair and laser salon with premium services. I redesigned the website to improve readability, elevate brand perception, and create a faster, clearer path from browsing to booking.",
     "roleDescription": "End-to-end design | User research | Prototyping | Usability testing",
     "timelineDates": "Sept 2024 - Nov 2024 (12 weeks)",
     "deliverables": "Wireframes | Prototypes | Design System | Usability Report",
     "challengeStatement": "To transform a dense, outdated website into a clean, editorial experience that highlights premium services, improves readability, and drives bookings through a refined, user-first design approach.",
     "approachIntro": "The goal was to design a site that reflects luxury while maintaining ease of use. The experience needed to orient users quickly, reduce cognitive load, present services clearly, and guide users toward booking without overwhelming them.",
+    "principles": [
+      "Clarity over complexity",
+      "Design for fast decisions",
+      "Scan, don't overwhelm",
+      "Conversion-driven layout"
+    ],
+    "decisionOverview": "The redesign focused on reducing cognitive overload while aligning the visual experience with the salon's premium positioning. Every decision prioritized clarity, speed, and conversion.",
+    "decisions": [
+      {
+        "title": "Clear 3-Second Hero",
+        "description": "Redesigned the hero section to instantly communicate services and value within seconds, helping users understand what the salon offers without scrolling.",
+        "image": "/images/lustre-and-glow-1-1x.webp",
+        "image2x": "/images/lustre-and-glow-1-2x.webp"
+      },
+      {
+        "title": "Scannable Pricing Structure",
+        "description": "Transformed dense pricing tables into a cleaner, more digestible format, allowing users to quickly find services and make booking decisions with confidence.",
+        "image": "/images/lustre-and-glow-2-1x.webp",
+        "image2x": "/images/lustre-and-glow-2-2x.webp"
+      },
+      {
+        "title": "Shortened, SEO-Friendly Content",
+        "description": "Condensed long text sections into concise, skimmable content while retaining key keywords, improving both user experience and search visibility.",
+        "image": "/images/lustre-and-glow-1-1x.webp",
+        "image2x": "/images/lustre-and-glow-1-2x.webp"
+      }
+    ],
+    "reflections": [
+      "This project reinforced how critical first impressions are, especially in service-based businesses where users decide quickly whether to stay or leave.",
+      "I learned that simplifying content doesn't mean losing value; it often strengthens both clarity and conversion when done strategically.",
+      "It also highlighted the importance of aligning visual design with brand perception - luxury services require an equally refined digital experience."
+    ],
     // project card thumbnail (single JPG used on the index)
     "image": "/images/lustre-and-glow.jpg",
     "thumb1x": "/images/lustre-and-glow.jpg",
