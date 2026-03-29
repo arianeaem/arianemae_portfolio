@@ -34,13 +34,45 @@ window.PROJECTS = {
     "description": "Makeup by Jane is an award-winning Melbourne bridal makeup artist known for her calm presence and timeless artistry. I redesigned her website to better reflect her premium reputation, highlight her portfolio, and create a seamless experience that turns visitors into bridal enquiries.",
     // New UX Case Study fields
     "descriptor": "Bridal makeup artist portfolio and booking platform",
-    "outcome": "Streamlined enquiry process resulting in 60% more qualified leads",
-    "executiveSummary": "I transformed Jane's online presence from a basic portfolio into a strategic booking platform that reflects her artistry and calm professionalism. The redesign positioned her as Melbourne's premier bridal makeup artist.",
+    "outcome": "A conversion-focused website redesign that elevates Jane's premium brand, showcases her portfolio, and streamlines the booking experience for brides.",
+    "executiveSummary": "Makeup by Jane is an award-winning Melbourne bridal makeup artist known for her calm presence and timeless artistry. I redesigned her website to better reflect her premium reputation, highlight her portfolio, and create a seamless experience that turns visitors into bridal enquiries.",
     "roleDescription": "User research | Information architecture | Visual design | Conversion optimization",
     "timelineDates": "May 2024 - July 2024 (10 weeks)",
     "deliverables": "Competitive Analysis | User Personas | Journey Maps | Interactive Prototype",
     "challengeStatement": "To create a website that better reflects Jane's premium reputation, highlights her portfolio effectively, and creates a seamless experience that converts visitors into bridal enquiries.",
     "approachIntro": "The strategy focused on showcasing Jane's artistry while simplifying the booking journey. The design needed to communicate premium quality, build trust through portfolio presentation, and remove friction from the enquiry process.",
+    "principles": [
+      "Clarity over complexity",
+      "Visual proof builds trust",
+      "Emotion drives decisions",
+      "Reduce friction to convert"
+    ],
+    "decisionOverview": "Every decision was made to balance emotional connection with clear conversion paths, helping brides quickly trust Jane, explore her work, and confidently enquire.",
+    "decisions": [
+      {
+        "title": "Portfolio-First Layout",
+        "description": "I prioritized showcasing real bridal work early to build instant trust and help users visualize themselves as Jane's client.",
+        "image": "/images/makeup-by-jane-1-1x.webp",
+        "image2x": "/images/makeup-by-jane-1-2x.webp"
+      },
+      {
+        "title": "Clear Service Structure",
+        "description": "I organized services into simple, scannable categories to reduce confusion and guide users quickly to relevant information.",
+        "image": "/images/makeup-by-jane-2-1x.webp",
+        "image2x": "/images/makeup-by-jane-2-2x.webp"
+      },
+      {
+        "title": "High-Contrast CTAs",
+        "description": "I used contrasting buttons and strategic placement to make booking actions obvious and increase conversion rates.",
+        "image": "/images/makeup-by-jane-1-1x.webp",
+        "image2x": "/images/makeup-by-jane-1-2x.webp"
+      }
+    ],
+    "reflections": [
+      "I learned that in service-based businesses, trust is built more through visuals and emotional cues than heavy text.",
+      "I realized how important it is to reduce decision fatigue, especially for users already overwhelmed like brides.",
+      "This project reinforced that strong UX isn't just about aesthetics - it's about guiding users confidently toward action."
+    ],
     "image": "/images/makeup-by-jane.png",
     "thumb1x": "/images/makeup-by-jane.png",
     // gallery: two project images, each with density-based 1x/2x files
